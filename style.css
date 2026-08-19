@@ -1,7 +1,11 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html, body {
+html,
+body {
   margin: 0;
+  width: 100%;
   min-height: 100%;
   font-family: Arial, Helvetica, sans-serif;
   background: #111;
@@ -19,8 +23,8 @@ body {
   justify-content: center;
   padding: 24px;
   background:
-    radial-gradient(circle at 50% 15%, #3a1630 0, transparent 42%),
-    linear-gradient(145deg, #0d0d0f, #1a0e17);
+    radial-gradient(circle at 50% 15%, #3a1630, transparent 42%),
+    linear-gradient(145deg, #0d0d0d, #1a0e17);
 }
 
 .profile-card {
@@ -68,7 +72,8 @@ h1 {
   background: rgba(255,255,255,.06);
 }
 
-.stats strong, .stats span {
+.stats strong,
+.stats span {
   display: block;
 }
 
@@ -78,15 +83,14 @@ h1 {
 
 .stats span {
   margin-top: 5px;
-  color: #aaaab2;
+  color: #aaa;
   font-size: 12px;
 }
 
 .notice {
   padding: 16px;
   border-radius: 15px;
-  background: rgba(255,255,255,.055);
-  margin-bottom: 18px;
+  background: rgba(255,255,255,.05);
 }
 
 .notice strong {
@@ -100,23 +104,88 @@ h1 {
   line-height: 1.5;
 }
 
-.cta {
-  display: block;
-  padding: 15px 18px;
-  border-radius: 13px;
-  background: linear-gradient(90deg, #ff2f86, #8d35ff);
-  color: #fff;
-  text-decoration: none;
+/* AGE POPUP */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  background: rgba(0,0,0,.72);
+  backdrop-filter: blur(4px);
+}
+
+.age-box {
+  width: min(625px, 100%);
+  min-height: 520px;
+  padding: 70px 28px 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid #9cff63;
+  border-radius: 18px;
+  background: #000;
+  box-shadow: 0 0 25px rgba(156,255,99,.15);
+}
+
+.age-box h2 {
+  margin: 0 0 45px;
+  font-size: clamp(38px, 9vw, 62px);
+  line-height: 1.15;
   font-weight: 800;
-  letter-spacing: .4px;
+  letter-spacing: 1px;
 }
 
-.cta:active {
-  transform: scale(.99);
+.question {
+  margin: 0 0 38px;
+  font-size: clamp(20px, 4.5vw, 30px);
+  line-height: 1.35;
+  font-weight: 700;
 }
 
-.small {
-  margin: 14px 0 0;
-  color: #888892;
-  font-size: 11px;
+.buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.buttons button {
+  min-width: 125px;
+  padding: 18px 30px;
+  border: 0;
+  border-radius: 10px;
+  background: #9cff63;
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.buttons button:active {
+  transform: scale(.97);
+}
+
+@media (max-width: 480px) {
+  .age-box {
+    min-height: 620px;
+    padding: 45px 20px;
+  }
+
+  .age-box h2 {
+    margin-bottom: 42px;
+  }
+
+  .question {
+    margin-bottom: 35px;
+  }
+
+  .buttons button {
+    min-width: 115px;
+    padding: 17px 24px;
+  }
 }
