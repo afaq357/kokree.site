@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kokree — Profile</title>
+  <title>Kokree</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
   <main class="page">
     <section class="profile-card">
+
       <div class="avatar">K</div>
       <h1>Kokree</h1>
       <p class="subtitle">Welcome to my page</p>
@@ -24,13 +27,39 @@
         <p>This page is intended for adults. Please continue only if you are 18 or older.</p>
       </div>
 
-      <!-- Replace the URL below with your approved CrakRevenue tracking/affiliate URL. -->
-<a class="cta" href="https://t.camsk5.com/421332/10292/39514?aff_sub=Page+1&source=Facebook&po=6533&aff_sub5=SF_006OG000004lmDN">
-  ENTER 18+ AREA
-</a>
-
-      <p class="small">By continuing, you confirm that you are 18 or older.</p>
     </section>
   </main>
+
+  <!-- Age Verification Popup -->
+  <div class="overlay" id="agePopup">
+    <div class="age-box">
+
+      <h2>VALIDATE<br>YOUR AGE</h2>
+
+      <p class="question">
+        Can you confirm that you<br>
+        are over the age of 18?
+      </p>
+
+      <div class="buttons">
+        <button class="no-btn" onclick="leaveSite()">NO</button>
+
+        <button class="yes-btn" onclick="continueSite()">YES</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function continueSite() {
+      window.location.href =
+        "https://t.camsk5.com/421332/10292/39514?aff_sub=Page+1&source=Facebook&po=6533&aff_sub5=SF_006OG000004lmDN";
+    }
+
+    function leaveSite() {
+      window.location.href = "https://www.google.com/";
+    }
+  </script>
+
 </body>
 </html>
