@@ -21,7 +21,16 @@
         <div><strong>258</strong><span>Photos</span></div>
         <div><strong>18+</strong><span>Live</span></div>
       </div>
+<div class="slider">
+  <div class="slides">
+    <img src="https://picsum.photos/600/400?random=1" alt="Image 1">
+    <img src="https://picsum.photos/600/400?random=2" alt="Image 2">
+    <img src="https://picsum.photos/600/400?random=3" alt="Image 3">
+  </div>
 
+  <button class="prev" onclick="moveSlide(-1)">❮</button>
+  <button class="next" onclick="moveSlide(1)">❯</button>
+</div>
       <div class="notice">
         <strong>18+ ONLY</strong>
         <p>This page is intended for adults. Please continue only if you are 18 or older.</p>
@@ -51,6 +60,29 @@
   </div>
 
   <script>
+    let currentSlide = 0;
+
+function moveSlide(direction) {
+  const slides = document.querySelector('.slides');
+  const totalSlides = document.querySelectorAll('.slides img').length;
+
+  currentSlide += direction;
+
+  if (currentSlide >= totalSlides) {
+    currentSlide = 0;
+  }
+
+  if (currentSlide < 0) {
+    currentSlide = totalSlides - 1;
+  }
+
+slides.style.transform =
+  `translateX(-${currentSlide * 100}%)`;
+}
+
+setInterval(function() {
+  moveSlide(1);
+}, 3000);
     function continueSite() {
       window.location.href =
         "https://t.camsk5.com/421332/10292/39514?aff_sub=Page+1&source=Facebook&po=6533&aff_sub5=SF_006OG000004lmDN";
@@ -60,6 +92,3 @@
       window.location.href = "https://www.google.com/";
     }
   </script>
-
-</body>
-</html>
