@@ -542,3 +542,30 @@ aspect-ratio: 2 / 3;
     gap: 8px;
   }
 }
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+  overflow: hidden;
+}
+
+.action-btn span {
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .action-btn {
+    height: 70px;
+    font-size: 21px;
+  }
+
+  .action-btn span {
+    font-size: 20px;
+  }
+}
