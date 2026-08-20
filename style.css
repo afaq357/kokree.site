@@ -351,13 +351,13 @@ aspect-ratio: 2 / 3;
     height: 125vw;
     border-radius: 0;
   }.action-btn {
-  height: 84px;
-  font-size: 26px;
+  height: 74px;
+  font-size: 22px;
   border-radius: 50px;
 }
 
 .action-btn span {
-  font-size: 24px;
+  font-size: 20px;
 }
 }
 /* BLUE ACTION BUTTONS */
