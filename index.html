@@ -9,60 +9,74 @@
 
 <body>
 
-  <main class="page">
-    <section class="profile-card">
+<main class="page">
+  <section class="profile-card">
 
-      <div class="avatar">K</div>
-      <h1>Kokree</h1>
-      <p class="subtitle">Welcome to my page</p>
+    <div class="avatar">K</div>
 
-      <div class="stats">
-        <div><strong>500</strong><span>Videos</span></div>
-        <div><strong>258</strong><span>Photos</span></div>
-        <div><strong>18+</strong><span>Live</span></div>
-      </div>
-<div class="slider">
-  <div class="slides">
-    <img src="https://picsum.photos/600/400?random=1" alt="Image 1">
-    <img src="https://picsum.photos/600/400?random=2" alt="Image 2">
-    <img src="https://picsum.photos/600/400?random=3" alt="Image 3">
-  </div>
+    <h1>Kokree</h1>
 
-  <button class="prev" onclick="moveSlide(-1)">❮</button>
-  <button class="next" onclick="moveSlide(1)">❯</button>
-</div>
-      <div class="notice">
-        <strong>18+ ONLY</strong>
-        <p>This page is intended for adults. Please continue only if you are 18 or older.</p>
+    <p class="subtitle">Welcome to my page</p>
+
+    <div class="stats">
+      <div><strong>500</strong><span>Videos</span></div>
+      <div><strong>258</strong><span>Photos</span></div>
+      <div><strong>18+</strong><span>Live</span></div>
+    </div>
+
+    <!-- AUTO IMAGE SLIDER -->
+    <div class="slider">
+
+      <div class="slides">
+        <img src="https://picsum.photos/600/400?random=1" alt="Image 1">
+        <img src="https://picsum.photos/600/400?random=2" alt="Image 2">
+        <img src="https://picsum.photos/600/400?random=3" alt="Image 3">
       </div>
 
-    </section>
-  </main>
-
-  <!-- Age Verification Popup -->
-  <div class="overlay" id="agePopup">
-    <div class="age-box">
-
-      <h2>VALIDATE<br>YOUR AGE</h2>
-
-      <p class="question">
-        Can you confirm that you<br>
-        are over the age of 18?
-      </p>
-
-      <div class="buttons">
-        <button class="no-btn" onclick="leaveSite()">NO</button>
-
-        <button class="yes-btn" onclick="continueSite()">YES</button>
-      </div>
+      <button class="prev" onclick="moveSlide(-1)">❮</button>
+      <button class="next" onclick="moveSlide(1)">❯</button>
 
     </div>
+
+    <div class="notice">
+      <strong>18+ ONLY</strong>
+      <p>This page is intended for adults. Please continue only if you are 18 or older.</p>
+    </div>
+
+  </section>
+</main>
+
+<!-- AGE VERIFICATION POPUP -->
+
+<div class="overlay" id="agePopup">
+
+  <div class="age-box">
+
+    <h2>VALIDATE<br>YOUR AGE</h2>
+
+    <p class="question">
+      Can you confirm that you<br>
+      are over the age of 18?
+    </p>
+
+    <div class="buttons">
+
+      <button class="no-btn" onclick="leaveSite()">NO</button>
+
+      <button class="yes-btn" onclick="continueSite()">YES</button>
+
+    </div>
+
   </div>
 
-  <script>
-    let currentSlide = 0;
+</div>
+
+<script>
+
+let currentSlide = 0;
 
 function moveSlide(direction) {
+
   const slides = document.querySelector('.slides');
   const totalSlides = document.querySelectorAll('.slides img').length;
 
@@ -76,19 +90,32 @@ function moveSlide(direction) {
     currentSlide = totalSlides - 1;
   }
 
-slides.style.transform =
-  `translateX(-${currentSlide * 100}%)`;
+  slides.style.transform =
+    `translateX(-${currentSlide * 100}%)`;
 }
+
+/* AUTOMATICALLY CHANGE IMAGE EVERY 3 SECONDS */
 
 setInterval(function() {
   moveSlide(1);
 }, 3000);
-    function continueSite() {
-      window.location.href =
-        "https://t.camsk5.com/421332/10292/39514?aff_sub=Page+1&source=Facebook&po=6533&aff_sub5=SF_006OG000004lmDN";
-    }
 
-    function leaveSite() {
-      window.location.href = "https://www.google.com/";
-    }
-  </script>
+
+/* YES BUTTON */
+
+function continueSite() {
+  window.location.href =
+    "https://t.camsk5.com/421332/10292/39514?aff_sub=Page+1&source=Facebook&po=6533&aff_sub5=SF_0060G0000041mDN";
+}
+
+
+/* NO BUTTON */
+
+function leaveSite() {
+  window.location.href = "https://www.google.com/";
+}
+
+</script>
+
+</body>
+</html>
