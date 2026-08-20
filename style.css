@@ -247,3 +247,9 @@ h1 {
     font-size: 20px;
   }
 }
+.notice p {
+  margin: 7px 0 0;
+  color: #c5c5cc;
+  font-size: 13px;
+  line-height: 1.5;
+}
