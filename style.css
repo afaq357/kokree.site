@@ -350,7 +350,15 @@ aspect-ratio: 2 / 3;
   .slider {
     height: 330px;
     border-radius: 0;
-  }
+  }.action-btn {
+  height: 84px;
+  font-size: 26px;
+  border-radius: 50px;
+}
+
+.action-btn span {
+  font-size: 24px;
+}
 }
 /* BLUE ACTION BUTTONS */
 
