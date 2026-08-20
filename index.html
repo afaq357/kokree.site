@@ -6,79 +6,101 @@
   <title>Kokree</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <main class="page">
-    <section class="profile-card">
+<main class="page">
 
-      <div class="profile-head">
-        <div class="avatar">K</div>
-        <div class="profile-info">
-          <h1>Kokree <span class="check" aria-label="featured profile">✓</span></h1>
-          <p>@kokree <span class="flag">🇺🇸</span></p>
-        </div>
+  <section class="profile">
+
+    <!-- PROFILE -->
+    <div class="profile-top">
+
+      <div class="profile-photo">
+        <img src="images/profile.jpg" alt="Kokree">
+        <span class="online"></span>
       </div>
 
-      <div class="stats">
-        <div><strong>500</strong><span>Videos</span></div>
-        <div><strong>258</strong><span>Photos</span></div>
-        <div><strong>18+</strong><span>Live</span></div>
-      </div>
+      <div class="profile-details">
 
-      <div class="actions">
-        <button type="button">Follow</button>
-        <button type="button">Message</button>
-      </div>
+        <h1>
+          KOKREE
+          <span class="verified">✓</span>
+          <span class="flag">🇺🇸</span>
+        </h1>
 
-      <div class="slider" aria-label="Automatic image slider">
-        <div class="slides">
-          <img src="https://picsum.photos/900/650?random=21" alt="Profile image 1">
-          <img src="https://picsum.photos/900/650?random=22" alt="Profile image 2">
-          <img src="https://picsum.photos/900/650?random=23" alt="Profile image 3">
-          <img src="https://picsum.photos/900/650?random=24" alt="Profile image 4">
+        <div class="stars">★★★★★</div>
+
+        <div class="numbers">
+          <span>▣ <b>500</b> videos</span>
+          <span>▧ <b>258</b> photos</span>
         </div>
 
-        <button class="slider-btn prev" type="button" onclick="moveSlide(-1)" aria-label="Previous image">‹</button>
-        <button class="slider-btn next" type="button" onclick="moveSlide(1)" aria-label="Next image">›</button>
-
-        <div class="dots" id="dots"></div>
       </div>
 
-      <div class="notice">
-        <strong>18+ ONLY</strong>
-        <p>This page is intended for adults. Please continue only if you are 18 or older.</p>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="buttons">
+      <button>▶ +18 Livestream</button>
+      <button>▣ Explicit Content</button>
+    </div>
+
+    <!-- IMAGE SLIDER -->
+    <div class="slider">
+
+      <div class="slides">
+
+        <img src="images/model1.jpg" alt="Kokree photo">
+        <img src="images/model2.jpg" alt="Kokree photo">
+        <img src="images/model3.jpg" alt="Kokree photo">
+        <img src="images/model4.jpg" alt="Kokree photo">
+        <img src="images/model5.jpg" alt="Kokree photo">
+
       </div>
 
-    </section>
-  </main>
+      <button class="prev" onclick="moveSlide(-1)">‹</button>
+      <button class="next" onclick="moveSlide(1)">›</button>
 
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelector(".slides");
-    const images = document.querySelectorAll(".slides img");
-    const dots = document.getElementById("dots");
+    </div>
 
-    images.forEach((_, i) => {
-      const dot = document.createElement("span");
-      dot.className = i === 0 ? "dot active" : "dot";
-      dot.onclick = () => showSlide(i);
-      dots.appendChild(dot);
-    });
+  </section>
 
-    function showSlide(index) {
-      currentSlide = (index + images.length) % images.length;
-      slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-      document.querySelectorAll(".dot").forEach((dot, i) => {
-        dot.classList.toggle("active", i === currentSlide);
-      });
-    }
+</main>
 
-    function moveSlide(direction) {
-      showSlide(currentSlide + direction);
-    }
+<script>
 
-    setInterval(() => moveSlide(1), 3000);
-  </script>
+let currentSlide = 0;
+
+const slides = document.querySelector(".slides");
+const totalSlides = document.querySelectorAll(".slides img").length;
+
+function showSlide() {
+  slides.style.transform =
+    "translateX(-" + (currentSlide * 100) + "%)";
+}
+
+function moveSlide(direction) {
+
+  currentSlide += direction;
+
+  if (currentSlide >= totalSlides) {
+    currentSlide = 0;
+  }
+
+  if (currentSlide < 0) {
+    currentSlide = totalSlides - 1;
+  }
+
+  showSlide();
+}
+
+/* AUTOMATIC SCROLL */
+setInterval(function() {
+  moveSlide(1);
+}, 3000);
+
+</script>
 
 </body>
 </html>
