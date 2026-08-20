@@ -438,3 +438,99 @@ aspect-ratio: 2 / 3;
   font-size: 42px;
   font-weight: bold;
 }
+/* REFERENCE PROFILE DESIGN */
+.profile-top {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.profile-photo {
+  width: 105px;
+  height: 105px;
+  min-width: 105px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+}
+
+.profile-details {
+  flex: 1;
+}
+
+.profile-details h1 {
+  margin: 0 0 10px;
+  font-size: 32px;
+  font-weight: 800;
+  color: #24347f;
+  white-space: nowrap;
+}
+
+.profile-details .verified {
+  color: #111;
+  font-size: 32px;
+}
+
+.profile-details .flag {
+  font-size: 28px;
+  margin-left: 5px;
+}
+
+.stars {
+  color: #f5b900;
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.number {
+  display: flex;
+  gap: 12px;
+  color: #d0007f;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .profile-top {
+    gap: 15px;
+    align-items: center;
+  }
+
+  .profile-photo {
+    width: 105px;
+    height: 105px;
+    min-width: 105px;
+  }
+
+  .profile-details h1 {
+    font-size: 27px;
+  }
+
+  .profile-details .verified {
+    font-size: 27px;
+  }
+
+  .profile-details .flag {
+    font-size: 25px;
+  }
+
+  .stars {
+    font-size: 25px;
+  }
+
+  .number {
+    font-size: 17px;
+    gap: 8px;
+  }
+}
