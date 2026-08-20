@@ -348,7 +348,7 @@ aspect-ratio: 2 / 3;
 
 @media (max-width: 480px) {
   .slider {
-    height: 330px;
+    height: 125vw;
     border-radius: 0;
   }.action-btn {
   height: 84px;
