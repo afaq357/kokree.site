@@ -569,3 +569,22 @@ aspect-ratio: 2 / 3;
     font-size: 20px;
   }
 }
+.jerkmate-ad {
+  width: 100%;
+  text-align: center;
+  margin: 15px 0 20px;
+}
+
+.jerkmate-ad img {
+  width: 305px;
+  height: 99px;
+  max-width: 100%;
+  display: inline-block;
+}
+.action-btn {
+  width: 90%;
+  margin: 10px auto;
+  padding: 16px 12px;
+  font-size: 24px;
+  box-sizing: border-box;
+}
