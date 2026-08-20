@@ -261,8 +261,34 @@ body {
     margin-left: 25px;
     margin-right: 25px;
   }
+    .profile-photo {
+  width: 105px;
+  height: 105px;
+  flex: 0 0 105px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background: #ddd;
+}
 
-  .slider {
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.online {
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #18d64b;
+  border: 3px solid #fff;
+}
     aspect-ratio: 4 / 3;
   }
 
