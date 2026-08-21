@@ -432,3 +432,29 @@ body {
   height: 55px !important;
   font-size: 36px !important;
 }
+/* ================= BUTTON WIDTH MATCH ================= */
+
+.buttons {
+  padding-left: 100px !important;
+  padding-right: 100px !important;
+}
+/* ================= JERKMATE WIDTH FIX ================= */
+
+.jerkmate-ad {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.jerkmate-ad a {
+  display: block !important;
+  width: 100% !important;
+  max-width: 680px !important;
+}
+
+.jerkmate-ad img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 680px !important;
+  height: auto !important;
+}
