@@ -478,3 +478,16 @@ body {
   height: 100%;
   object-fit: cover;
 }
+/* VIDEOS / PHOTOS COLOR FIX */
+
+.numbers {
+  display: flex;
+  gap: 9px;
+  color: #d0007f;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.numbers span {
+  color: #d0007f;
+}
