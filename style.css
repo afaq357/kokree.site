@@ -392,3 +392,19 @@ body {
   font-weight: 700;
   z-index: 4;
 }
+/* JERKMATE FINAL SIZE + POSITION */
+
+.jerkmate-ad {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 18px;
+}
+
+.jerkmate-ad img {
+  width: 98% !important;
+  max-width: 680px !important;
+  height: auto !important;
+  display: block;
+}
