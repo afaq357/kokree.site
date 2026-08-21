@@ -439,3 +439,14 @@ body {
     font-size: 30px;
   }
 }
+/* ================= VIDEO / PHOTO ICONS ================= */
+
+.video-icon,
+.photo-icon {
+  color: #24347f !important;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 27px !important;
+  font-weight: 400 !important;
+  line-height: 1;
+  margin-right: 1px;
+}
