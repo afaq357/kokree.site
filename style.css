@@ -414,3 +414,26 @@ body {
   content: none !important;
   display: none !important;
 }
+/* EXPLICIT LABEL - SAME AS REFERENCE */
+
+.slider::after {
+  content: "Explicit" !important;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 118px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 20, 25, 0.72);
+
+  color: #ffd900;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 1;
+
+  z-index: 10;
+}
