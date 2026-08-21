@@ -391,3 +391,44 @@ body {
     font-size: 36px;
   }
 }
+/* ================= REFERENCE SIZE MATCH ================= */
+
+.jerkmate-ad {
+  width: 100% !important;
+  margin-top: 25px;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.jerkmate-ad img {
+  width: 100% !important;
+  max-width: 680px !important;
+  height: auto !important;
+  display: block;
+}
+
+.buttons {
+  width: 100% !important;
+  padding: 0 56px !important;
+  gap: 20px !important;
+  margin: 12px 0 20px !important;
+}
+
+.action-btn {
+  width: 100% !important;
+  height: 64px !important;
+  border-radius: 34px !important;
+  font-size: 17px !important;
+}
+
+.action-btn span {
+  font-size: 16px !important;
+}
+
+/* EXPLICIT IMAGE LABEL */
+
+.slider::after {
+  height: 55px !important;
+  font-size: 36px !important;
+}
