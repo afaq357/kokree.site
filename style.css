@@ -497,5 +497,8 @@ body {
   color: #24347f;
   font-size: 24px;
   font-weight: bold;
+  .profile-top {
+  transform: translateY(6px);
+  }
   margin-right: 3px;
 }
