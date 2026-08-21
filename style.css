@@ -25,10 +25,8 @@ body {
   background: #fff;
 }
 
-.profile-card {
+.profile {
   width: 100%;
-  text-align: center;
-  padding: 10px 8px 25px;
 }
 
 /* ================= PROFILE ================= */
@@ -39,6 +37,7 @@ body {
   gap: 15px;
   text-align: left;
   margin-bottom: 14px;
+  transform: translateY(7px);
 }
 
 .profile-photo {
@@ -76,9 +75,7 @@ body {
 }
 
 .profile-details h1 {
-  .profile-details h1 {
   margin: 6px 0 7px;
-  }
   font-size: 28px;
   font-weight: 800;
   color: #24347f;
@@ -95,63 +92,47 @@ body {
   margin-left: 4px;
 }
 
+/* ================= STARS ================= */
+
 .stars {
   color: #f5b900;
-  font-size: 24px;
+  font-size: 31px;
   letter-spacing: 1px;
-  margin-bottom: 5px;
+  line-height: 1;
+  margin-bottom: 8px;
 }
 
-.number {
+/* ================= VIDEOS / PHOTOS ================= */
+
+.numbers {
   display: flex;
-  gap: 9px;
+  align-items: center;
+  gap: 7px;
   color: #d0007f;
-  font-size: 20px;
+  font-size: 17px;
   white-space: nowrap;
 }
 
-.number span {
-  color: #d0007f;
-}
-}
-
-/* ================= STATS ================= */
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
-  margin: 10px 0 12px;
+.numbers b {
+  font-size: 18px;
 }
 
-.stats div {
-  padding: 7px 3px;
-  text-align: center;
-  background: #fff;
-}
-
-.stats strong {
-  display: block;
-  font-size: 22px;
-  color: #111;
-}
-
-.stats span {
-  display: block;
-  margin-top: 2px;
-  color: #d81b87;
-  font-size: 14px;
+.video-icon,
+.photo-icon {
+  color: #24347f;
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 1;
+  margin-right: 1px;
 }
 
 /* ================= JERKMATE AD ================= */
 
-.jerkmate-ad img {
-  width: 305px;
-  max-width: 94%;
-  height: 99px;
-  object-fit: fill;
-  display: block;
-}
+.jerkmate-ad {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 15px 0 18px;
 }
 
 .jerkmate-ad img {
@@ -159,9 +140,6 @@ body {
   max-width: 660px;
   height: auto;
   display: block;
-  margin: 0 auto;
-}
-}
 }
 
 /* ================= BLUE BUTTONS ================= */
@@ -193,6 +171,9 @@ body {
   padding: 0 10px;
   text-decoration: none;
 }
+
+.action-btn span {
+  font-size: 18px;
 }
 
 /* ================= SLIDER ================= */
@@ -202,26 +183,25 @@ body {
   position: relative;
   overflow: hidden;
   background: #111;
-  border-radius: 16px;
-  aspect-ratio: 2 / 3;
   margin: 15px 0 20px;
+  aspect-ratio: 2 / 3;
 }
 
 .slides {
-  display: flex;
+  display: flex !important;
   width: 100%;
   height: 100%;
   transition: transform 0.5s ease;
 }
 
 .slides img {
-  width: 100%;
-  min-width: 100%;
-  flex: 0 0 100%;
+  display: block !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
   height: 100%;
   object-fit: cover;
-  display: block;
-}
 }
 
 /* ================= SLIDER ARROWS ================= */
@@ -235,10 +215,11 @@ body {
   height: 42px;
   border: 0;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.25);
   color: #fff;
-  font-size: 27px;
+  font-size: 38px;
   font-weight: bold;
+  line-height: 35px;
   z-index: 5;
 }
 
@@ -250,88 +231,21 @@ body {
   right: 10px;
 }
 
-/* ================= DOTS ================= */
-
-.dots {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 9px;
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  z-index: 6;
-}
-
-.dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.6);
-}
-
-.dot.active {
-  width: 20px;
-  border-radius: 10px;
-  background: #fff;
-}
-
-/* ================= EXPLICIT STRIP ================= */
-
-.slider::after {
-  content: "Explicit";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 18px 0;
-  text-align: center;
-  background: rgba(0, 20, 25, 0.75);
-  color: #ffd900;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-/* ================= 18+ NOTICE ================= */
-
-.notice {
-  margin: 15px 10px 0;
-  padding: 20px 14px;
-  border-radius: 16px;
-  background: #f4f4f6;
-  color: #555;
-  text-align: center;
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-.notice strong {
-  color: #111;
-  font-size: 22px;
-}
-
-.notice p {
-  margin: 7px 0 0;
-}
-
 /* ================= MOBILE ================= */
 
 @media (max-width: 480px) {
+
   .page {
     width: 100%;
     max-width: 100%;
     padding: 8px 0 25px;
   }
 
-  .profile-card {
-    width: 100%;
-    padding: 8px 0 20px;
-  }
-
   .profile-top {
     width: 100%;
     padding: 0 12px;
     gap: 12px;
+    transform: translateY(7px);
   }
 
   .profile-photo {
@@ -352,23 +266,32 @@ body {
     font-size: 23px;
   }
 
+  /* BARE STARS */
   .stars {
-    font-size: 23px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
   }
 
-  .number {
+  /* CHOTA TEXT */
+  .numbers {
     font-size: 16px;
-    gap: 8px;
+    gap: 6px;
   }
 
-  .stats {
-    width: 100%;
-    padding: 0 8px;
+  .numbers b {
+    font-size: 17px;
   }
 
+  .video-icon,
+  .photo-icon {
+    font-size: 22px;
+  }
+
+  /* BARA AD */
   .jerkmate-ad {
     width: 100%;
-    margin: 12px 0 15px;
+    margin: 15px 0 18px;
   }
 
   .jerkmate-ad img {
@@ -391,26 +314,15 @@ body {
     border-radius: 34px;
   }
 
-  .action-btn span {
-    font-size: 17px;
-  }
-
   .slider {
     width: 100%;
     margin: 15px 0 20px;
-    border-radius: 0;
     aspect-ratio: 2 / 3;
   }
 
-  .slides {
-    width: 100%;
-    height: 100%;
-  }
-
   .slides img {
-    width: 100%;
-    min-width: 100%;
-    flex: 0 0 100%;
+    width: 100% !important;
+    min-width: 100% !important;
     height: 100%;
     object-fit: cover;
   }
@@ -419,7 +331,7 @@ body {
   .next {
     width: 42px;
     height: 42px;
-    font-size: 27px;
+    font-size: 38px;
   }
 
   .prev {
@@ -429,78 +341,4 @@ body {
   .next {
     right: 10px;
   }
-
-  .slider::after {
-    font-size: 30px;
-    padding: 18px 0;
-  }
-
-  .notice {
-    margin-left: 12px;
-    margin-right: 12px;
-  }
-}
-/* FINAL FIX - SLIDER + AD ONLY */
-
-.jerkmate-ad {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 12px 0 15px;
-}
-
-.jerkmate-ad img {
-  width: 305px;
-  max-width: 94%;
-  height: 99px;
-  object-fit: fill;
-  display: block;
-}
-
-/* SLIDER FIX */
-.slider {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  margin: 15px 0 20px;
-}
-
-.slides {
-  display: flex !important;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s ease;
-}
-
-.slides img {
-  display: block !important;
-  width: 100% !important;
-  min-width: 100% !important;
-  max-width: 100% !important;
-  flex: 0 0 100% !important;
-  height: 100%;
-  object-fit: cover;
-}
-/* VIDEOS / PHOTOS COLOR FIX */
-
-.numbers {
-  display: flex;
-  gap: 9px;
-  color: #d0007f;
-  font-size: 20px;
-  white-space: nowrap;
-}
-
-.numbers span {
-  color: #d0007f;
-}
-.video-icon,
-.photo-icon {
-  color: #24347f;
-  font-size: 24px;
-  font-weight: bold;
-  .profile-top {
-  transform: translateY(6px);
-  }
-  margin-right: 3px;
 }
