@@ -546,3 +546,67 @@ body {
 .jerkmate-ad img {
   width: 100% !important;
 }
+/* ================= FINAL BUTTON FIX ================= */
+
+.buttons {
+  width: calc(100% - 110px) !important;
+  max-width: 630px !important;
+  padding: 0 !important;
+  margin: 16px auto 20px !important;
+  gap: 18px !important;
+}
+
+.action-btn {
+  width: 100% !important;
+  height: 62px !important;
+  min-height: 62px !important;
+  padding: 0 10px !important;
+  border-radius: 32px !important;
+  font-size: 17px !important;
+}
+
+
+/* ================= JERKMATE FINAL SIZE ================= */
+
+.jerkmate-ad {
+  width: 100% !important;
+  margin: 20px auto 18px !important;
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.jerkmate-ad a {
+  width: calc(100% - 44px) !important;
+  max-width: 660px !important;
+  margin: 0 auto !important;
+}
+
+.jerkmate-ad img {
+  width: 100% !important;
+  max-width: 660px !important;
+  height: auto !important;
+  display: block !important;
+}
+
+
+/* MOBILE */
+@media (max-width: 480px) {
+
+  .buttons {
+    width: calc(100% - 110px) !important;
+    padding: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    gap: 18px !important;
+  }
+
+  .action-btn {
+    width: 100% !important;
+    height: 62px !important;
+  }
+
+  .jerkmate-ad a {
+    width: calc(100% - 44px) !important;
+  }
+}
