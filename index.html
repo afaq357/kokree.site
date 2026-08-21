@@ -185,37 +185,49 @@ setInterval(function() {
 }, 3000);
 <script>
 var crakPopInParamsIframe = {
-  url: 'https://t.ajrkmx3.com/421332/8780/32499?po=6533&aff_sub5=SF_006OG000004lmDN&aff_sub4=AT_0016',
-  decryptUrl: false,
-  contentUrl: 'https://t.ajrkmx3.com/1/6072?source=testoffer&aff_id=1&transaction_id=postitial',
-  decryptContentUrl: false,
-  contentType: 'iframe',
-  width: '85%',
-  height: '85%',
-  timeout: false,
-  delayClose: 0,
-  clickStart: false,
-  closeIntent: false,
-  postitialBehavior: true,
-  closeButtonColor: '#000',
-  closeCrossColor: '#fff',
-  shadow: true,
-  shadowColor: '#000',
-  shadowOpacity: '.5',
-  shadeColor: '#111',
-  shadeOpacity: '0',
-  border: '1px',
-  borderColor: '#000',
-  borderRadius: '0px',
-  leadOut: true,
-  animation: 'slide',
-  direction: 'up',
-  verticalPosition: 'center',
-  horizontalPosition: 'center',
-  expireDays: 0.01
-};
-</script>
+<!-- 18+ POPUP -->
+<div id="agePopup" class="age-popup">
 
-<script src="https://crxcra.com/popin/latest/affstitial-min.js"></script>
+  <div class="age-overlay"></div>
+
+  <div class="age-box">
+
+    <button class="age-close" onclick="closeAgePopup()">×</button>
+
+    <div class="age-icon">18+</div>
+
+    <h2>18+ Content</h2>
+
+    <p>
+      This content is intended for adults only.
+      You must be 18 or older to continue.
+    </p>
+
+    <a
+      class="continue-btn"
+      href="https://t.ajrkmx3.com/421332/8780/0?source=Facebook&aff_sub5=SF_006OG000004lmDN"
+      target="_blank"
+      rel="noopener"
+    >
+      Continue →
+    </a>
+
+    <button class="cancel-btn" onclick="closeAgePopup()">
+      Cancel
+    </button>
+
+  </div>
+
+</div>
+
+<script>
+function openAgePopup() {
+  document.getElementById("agePopup").classList.add("show");
+}
+
+function closeAgePopup() {
+  document.getElementById("agePopup").classList.remove("show");
+}
+</script>
 </body>
 </html>
