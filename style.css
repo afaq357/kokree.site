@@ -104,8 +104,13 @@ body {
   display: flex;
   gap: 9px;
   color: #d0007f;
-  font-size: 16px;
+  font-size: 20px;
   white-space: nowrap;
+}
+
+.number span {
+  color: #d0007f;
+}
 }
 
 /* ================= STATS ================= */
