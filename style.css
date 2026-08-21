@@ -408,3 +408,9 @@ body {
   height: auto !important;
   display: block;
 }
+/* REMOVE EXPLICIT TEXT FROM IMAGE */
+
+.slider::after {
+  content: none !important;
+  display: none !important;
+}
