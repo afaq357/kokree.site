@@ -342,3 +342,53 @@ body {
     right: 10px;
   }
 }
+/* ================= FINAL PIXEL ADJUSTMENTS ================= */
+
+/* JERKMATE - BIGGER */
+.jerkmate-ad {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 15px 0 16px;
+}
+
+.jerkmate-ad img {
+  width: 100% !important;
+  max-width: 660px !important;
+  height: auto !important;
+  display: block;
+}
+
+/* SMALLER BLUE BUTTONS */
+.buttons {
+  gap: 12px;
+  margin: 12px 0 16px;
+  padding: 0 50px;
+}
+
+.action-btn {
+  height: 54px;
+  border-radius: 30px;
+  font-size: 17px;
+  gap: 7px;
+}
+
+.action-btn span {
+  font-size: 16px;
+}
+
+/* EXPLICIT CONTENT ON IMAGE */
+.slider::after {
+  content: "Explicit Content";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  background: rgba(0, 20, 25, 0.72);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  z-index: 4;
+}
