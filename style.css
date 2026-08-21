@@ -17,6 +17,8 @@ body {
   justify-content: center;
 }
 
+/* ================= PAGE ================= */
+
 .page {
   width: 100%;
   max-width: 700px;
@@ -28,6 +30,7 @@ body {
 .profile {
   width: 100%;
 }
+
 
 /* ================= PROFILE ================= */
 
@@ -92,6 +95,7 @@ body {
   margin-left: 4px;
 }
 
+
 /* ================= STARS ================= */
 
 .stars {
@@ -101,6 +105,7 @@ body {
   line-height: 1;
   margin-bottom: 8px;
 }
+
 
 /* ================= VIDEOS / PHOTOS ================= */
 
@@ -126,56 +131,74 @@ body {
   margin-right: 1px;
 }
 
+
 /* ================= JERKMATE AD ================= */
 
 .jerkmate-ad {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 25px;
-  margin-bottom: 18px;
+  margin: 20px 0 18px;
+  padding: 0;
+}
+
+.jerkmate-ad a {
+  display: block;
+  width: calc(100% - 44px);
+  max-width: 660px;
+  margin: 0 auto;
 }
 
 .jerkmate-ad img {
-  width: 98% !important;
-  max-width: 680px !important;
-  height: auto !important;
   display: block;
+  width: 100%;
+  max-width: 660px;
+  height: auto;
 }
+
 
 /* ================= BLUE BUTTONS ================= */
 
 .buttons {
+  width: calc(100% - 110px);
+  max-width: 630px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin: 12px 0 16px;
-  padding: 0 50px;
+  gap: 18px;
+  margin: 16px auto 20px;
+  padding: 0;
 }
 
 .action-btn {
   width: 100%;
   height: 54px;
+  min-height: 54px;
+
   border: none;
-  border-radius: 30px;
+  border-radius: 28px;
+
   background: #0796c8;
   color: #fff;
+
   font-size: 17px;
   font-weight: 700;
+
   cursor: pointer;
+  text-decoration: none;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
   text-align: center;
   gap: 7px;
   padding: 0 10px;
-  text-decoration: none;
 }
 
 .action-btn span {
   font-size: 16px;
 }
+
 
 /* ================= SLIDER ================= */
 
@@ -189,21 +212,22 @@ body {
 }
 
 .slides {
-  display: flex !important;
+  display: flex;
   width: 100%;
   height: 100%;
   transition: transform 0.5s ease;
 }
 
 .slides img {
-  display: block !important;
-  width: 100% !important;
-  min-width: 100% !important;
-  max-width: 100% !important;
-  flex: 0 0 100% !important;
+  display: block;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  flex: 0 0 100%;
   height: 100%;
   object-fit: cover;
 }
+
 
 /* ================= SLIDER ARROWS ================= */
 
@@ -212,15 +236,20 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+
   width: 42px;
   height: 42px;
+
   border: 0;
   border-radius: 50%;
+
   background: rgba(0, 0, 0, 0.25);
   color: #fff;
+
   font-size: 38px;
   font-weight: bold;
   line-height: 35px;
+
   z-index: 5;
 }
 
@@ -232,30 +261,35 @@ body {
   right: 10px;
 }
 
+
 /* ================= EXPLICIT LABEL ================= */
 
 .slider::after {
-  content: "Explicit" !important;
+  content: "Explicit";
+
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%;
-  height: 55px;
 
-  display: flex !important;
+  width: 100%;
+  height: 45px;
+
+  display: flex;
   align-items: center;
   justify-content: center;
 
   background: rgba(0, 20, 25, 0.72);
 
   color: #ffd900;
+
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 1;
 
   z-index: 10;
 }
+
 
 /* ================= MOBILE ================= */
 
@@ -266,6 +300,9 @@ body {
     max-width: 100%;
     padding: 8px 0 25px;
   }
+
+
+  /* PROFILE */
 
   .profile-top {
     width: 100%;
@@ -292,6 +329,7 @@ body {
     font-size: 23px;
   }
 
+
   /* STARS */
 
   .stars {
@@ -299,6 +337,7 @@ body {
     letter-spacing: 1px;
     margin-bottom: 8px;
   }
+
 
   /* NUMBERS */
 
@@ -316,40 +355,47 @@ body {
     font-size: 22px;
   }
 
+
   /* JERKMATE AD */
 
   .jerkmate-ad {
     width: 100%;
-    margin-top: 25px;
-    margin-bottom: 18px;
+    margin: 20px 0 18px;
+  }
+
+  .jerkmate-ad a {
+    width: calc(100% - 44px);
+    max-width: 660px;
   }
 
   .jerkmate-ad img {
-    width: 98% !important;
-    max-width: 680px !important;
-    height: auto !important;
+    width: 100%;
+    max-width: 660px;
   }
+
 
   /* BLUE BUTTONS */
 
   .buttons {
-    width: 100%;
-    padding: 0 50px;
-    margin: 12px 0 16px;
-    gap: 12px;
+    width: calc(100% - 110px);
+    max-width: 630px;
+    padding: 0;
+    margin: 16px auto 20px;
+    gap: 18px;
   }
 
   .action-btn {
     width: 100%;
     height: 54px;
+    min-height: 54px;
+    border-radius: 28px;
     font-size: 17px;
-    border-radius: 30px;
-    gap: 7px;
   }
 
   .action-btn span {
     font-size: 16px;
   }
+
 
   /* SLIDER */
 
@@ -360,12 +406,13 @@ body {
   }
 
   .slides img {
-    width: 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
 
   /* ARROWS */
 
@@ -384,229 +431,11 @@ body {
     right: 10px;
   }
 
+
   /* EXPLICIT */
 
   .slider::after {
-    height: 55px;
-    font-size: 36px;
-  }
-}
-/* ================= REFERENCE SIZE MATCH ================= */
-
-.jerkmate-ad {
-  width: 100% !important;
-  margin-top: 25px;
-  margin-bottom: 18px;
-  display: flex;
-  justify-content: center;
-}
-
-.jerkmate-ad img {
-  width: 100% !important;
-  max-width: 680px !important;
-  height: auto !important;
-  display: block;
-}
-
-.buttons {
-  width: 100% !important;
-  padding: 0 56px !important;
-  gap: 20px !important;
-  margin: 12px 0 20px !important;
-}
-
-.action-btn {
-  width: 100% !important;
-  height: 64px !important;
-  border-radius: 34px !important;
-  font-size: 17px !important;
-}
-
-.action-btn span {
-  font-size: 16px !important;
-}
-
-/* EXPLICIT IMAGE LABEL */
-
-.slider::after {
-  height: 55px !important;
-  font-size: 36px !important;
-}
-/* ================= BUTTON WIDTH MATCH ================= */
-
-.buttons {
-  padding-left: 100px !important;
-  padding-right: 100px !important;
-}
-/* ================= JERKMATE WIDTH FIX ================= */
-
-.jerkmate-ad {
-  width: 100% !important;
-  display: flex !important;
-  justify-content: center !important;
-}
-
-.jerkmate-ad a {
-  display: block !important;
-  width: 100% !important;
-  max-width: 680px !important;
-}
-
-.jerkmate-ad img {
-  display: block !important;
-  width: 100% !important;
-  max-width: 680px !important;
-  height: auto !important;
-}
-/* ================= FINAL REFERENCE MATCH ================= */
-
-/* JERKMATE AD */
-.jerkmate-ad {
-  width: 100% !important;
-  display: flex !important;
-  justify-content: center !important;
-  margin-top: 20px !important;
-  margin-bottom: 18px !important;
-}
-
-.jerkmate-ad a {
-  width: calc(100% - 44px) !important;
-  max-width: 660px !important;
-  display: block !important;
-}
-
-.jerkmate-ad img {
-  width: 100% !important;
-  max-width: 660px !important;
-  height: auto !important;
-  display: block !important;
-}
-
-
-/* BLUE BUTTONS */
-.buttons {
-  width: 100% !important;
-  padding-left: 55px !important;
-  padding-right: 55px !important;
-  gap: 18px !important;
-  margin: 16px 0 20px !important;
-}
-
-.action-btn {
-  width: 100% !important;
-  height: 62px !important;
-  border-radius: 32px !important;
-  font-size: 17px !important;
-  gap: 7px !important;
-}
-
-.action-btn span {
-  font-size: 16px !important;
-}
-
-
-/* EXPLICIT LABEL */
-.slider::after {
-  height: 45px !important;
-  font-size: 30px !important;
-}
-
-
-/* MOBILE */
-@media (max-width: 480px) {
-
-  .jerkmate-ad a {
-    width: calc(100% - 44px) !important;
-  }
-
-  .jerkmate-ad img {
-    width: 100% !important;
-  }
-
-  .buttons {
-    padding-left: 55px !important;
-    padding-right: 55px !important;
-    gap: 18px !important;
-  }
-
-  .action-btn {
-    height: 62px !important;
-    font-size: 17px !important;
-  }
-
-  .slider::after {
-    height: 45px !important;
-    font-size: 30px !important;
-  }
-}
-.buttons {
-  padding-left: 100px !important;
-  padding-right: 100px !important;
-}
-.jerkmate-ad img {
-  width: 100% !important;
-}
-/* ================= FINAL BUTTON FIX ================= */
-
-.buttons {
-  width: calc(100% - 110px) !important;
-  max-width: 630px !important;
-  padding: 0 !important;
-  margin: 16px auto 20px !important;
-  gap: 18px !important;
-}
-
-.action-btn {
-  width: 100% !important;
-  height: 62px !important;
-  min-height: 62px !important;
-  padding: 0 10px !important;
-  border-radius: 32px !important;
-  font-size: 17px !important;
-}
-
-
-/* ================= JERKMATE FINAL SIZE ================= */
-
-.jerkmate-ad {
-  width: 100% !important;
-  margin: 20px auto 18px !important;
-  padding: 0 !important;
-  display: flex !important;
-  justify-content: center !important;
-}
-
-.jerkmate-ad a {
-  width: calc(100% - 44px) !important;
-  max-width: 660px !important;
-  margin: 0 auto !important;
-}
-
-.jerkmate-ad img {
-  width: 100% !important;
-  max-width: 660px !important;
-  height: auto !important;
-  display: block !important;
-}
-
-
-/* MOBILE */
-@media (max-width: 480px) {
-
-  .buttons {
-    width: calc(100% - 110px) !important;
-    padding: 0 !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    gap: 18px !important;
-  }
-
-  .action-btn {
-    width: 100% !important;
-    height: 62px !important;
-  }
-
-  .jerkmate-ad a {
-    width: calc(100% - 44px) !important;
+    height: 45px;
+    font-size: 30px;
   }
 }
