@@ -491,3 +491,10 @@ body {
 .numbers span {
   color: #d0007f;
 }
+.video-icon,
+.photo-icon {
+  color: #24347f;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 3px;
+}
