@@ -461,9 +461,20 @@ body {
   flex-shrink: 0;
 }
 
+.video-icon,
+.photo-icon {
+  width: 23px;
+  height: 23px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #24347f;
+  flex-shrink: 0;
+}
+
 .video-icon svg,
 .photo-icon svg {
-  width: 27px;
-  height: 27px;
+  width: 23px;
+  height: 23px;
   display: block;
 }
