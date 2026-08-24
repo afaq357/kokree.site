@@ -2,12 +2,18 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Kokree</title>
 
   <link rel="stylesheet" href="style.css">
+
+  <!-- ADASTRA POPUNDER -->
+  <script src="https://inputoppose.com/7d/f9/97/7df9977abe41cb9ab0b703a1cdd40951.js"></script>
+
 </head>
 
 
@@ -18,16 +24,13 @@
   <section class="profile">
 
 
-    <!-- PROFILE -->
+    <!-- ==================== PROFILE ==================== -->
 
     <div class="profile-top">
 
       <div class="profile-photo">
 
-        <img
-          src="/profile.jpg"
-          alt="Kokree"
-        >
+        <img src="/profile.jpg" alt="Kokree">
 
         <span class="online"></span>
 
@@ -50,7 +53,7 @@
         </div>
 
 
-        <!-- NUMBERS -->
+        <!-- VIDEO / PHOTO NUMBERS -->
 
         <div class="numbers">
 
@@ -59,10 +62,7 @@
 
           <span class="video-icon">
 
-            <svg
-              viewBox="0 0 32 32"
-              aria-hidden="true"
-            >
+            <svg viewBox="0 0 32 32" aria-hidden="true">
 
               <rect
                 x="3"
@@ -158,6 +158,7 @@
 
 
           <b>205</b>
+
           <span>videos</span>
 
 
@@ -165,10 +166,7 @@
 
           <span class="photo-icon">
 
-            <svg
-              viewBox="0 0 32 32"
-              aria-hidden="true"
-            >
+            <svg viewBox="0 0 32 32" aria-hidden="true">
 
               <rect
                 x="3"
@@ -202,6 +200,7 @@
 
 
           <b>340</b>
+
           <span>photos</span>
 
         </div>
@@ -212,28 +211,7 @@
 
 
 
-    <!-- JERKMATE AD -->
-
-    <div class="jerkmate-ad">
-
-      <a
-        href="https://t.ajrkmx3.com/421332/8780/0?source=Facebook&file_id=610753&aff_sub5=SF_006OG000004lmDN&aff_sub4=AT_0002"
-        target="_blank"
-        rel="noopener"
-      >
-
-        <img
-          src="https://www.imglnkx.com/8780/009379E_JRKM_18_ALL_EN_55_L.gif"
-          alt="JerkMate"
-        >
-
-      </a>
-
-    </div>
-
-
-
-    <!-- BUTTONS -->
+    <!-- ==================== BUTTONS ==================== -->
 
     <div class="buttons">
 
@@ -242,7 +220,8 @@
 
       <button
         class="action-btn"
-        onclick="openAgePopup()"
+        type="button"
+        onclick="adButtonClick()"
       >
 
         <span>▶</span>
@@ -252,42 +231,44 @@
       </button>
 
 
-
       <!-- EXPLICIT CONTENT -->
 
-      <a
+      <button
         class="action-btn"
-        href="https://t.ajrkmx3.com/421332/8780/0?source=Facebook&aff_sub5=SF_006OG000004lmDN"
-        target="_blank"
-        rel="noopener"
+        type="button"
+        onclick="adButtonClick()"
       >
 
         <span>▧</span>
 
         Explicit Content
 
-      </a>
+      </button>
+
 
     </div>
 
 
 
-    <!-- IMAGE SLIDER -->
+    <!-- ==================== IMAGE SLIDER ==================== -->
 
     <div class="slider">
 
 
       <div class="slides">
 
+
         <img
           src="/model1.jpg"
           alt="Kokree photo"
         >
 
+
         <img
           src="/model2.jpg"
           alt="Kokree photo"
         >
+
 
         <img
           src="/model3.jpg"
@@ -297,34 +278,30 @@
       </div>
 
 
+      <!-- PREVIOUS -->
+
       <button
         class="prev"
+        type="button"
         onclick="moveSlide(-1)"
       >
         ‹
       </button>
 
 
+      <!-- NEXT -->
+
       <button
         class="next"
+        type="button"
         onclick="moveSlide(1)"
       >
         ›
       </button>
 
 
-      <!-- EXPLICIT LINK -->
-
-      <a
-        class="explicit-link"
-        href="https://t.ajrkmx3.com/421332/8780/0?source=Facebook&aff_sub5=SF_006OG000004lmDN"
-        target="_blank"
-        rel="noopener"
-      >
-        Explicit
-      </a>
-
     </div>
+
 
   </section>
 
@@ -332,7 +309,7 @@
 
 
 
-<!-- IMAGE SLIDER SCRIPT -->
+<!-- ==================== SLIDER SCRIPT ==================== -->
 
 <script>
 
@@ -368,8 +345,7 @@ function moveSlide(direction) {
 
   if (currentSlide < 0) {
 
-    currentSlide =
-      totalSlides - 1;
+    currentSlide = totalSlides - 1;
 
   }
 
@@ -387,105 +363,25 @@ setInterval(function() {
 
 }, 3000);
 
+
 </script>
 
 
 
-<!-- 18+ POPUP -->
-
-<div
-  id="agePopup"
-  class="age-popup"
->
-
-
-  <div class="age-overlay"></div>
-
-
-  <div class="age-box">
-
-
-    <!-- CLOSE -->
-
-    <button
-      class="age-close"
-      onclick="closeAgePopup()"
-    >
-      ×
-    </button>
-
-
-    <!-- ICON -->
-
-    <div class="age-icon">
-      18+
-    </div>
-
-
-    <h2>
-      18+ Content
-    </h2>
-
-
-    <p>
-
-      This content is intended for adults only.
-
-      You must be 18 or older to continue.
-
-    </p>
-
-
-    <!-- XTEASE AFFILIATE LINK -->
-
-    <a
-      class="continue-btn"
-      href="https://t.ajrkmx3.com/421332/8780/0?source=Facebook&aff_sub5=SF_006OG000004lmDN"
-      target="_blank"
-      rel="noopener"
-    >
-
-      Continue →
-
-    </a>
-
-
-    <!-- CANCEL -->
-
-    <button
-      class="cancel-btn"
-      onclick="closeAgePopup()"
-    >
-
-      Cancel
-
-    </button>
-
-
-  </div>
-
-</div>
-
-
-
-<!-- 18+ POPUP SCRIPT -->
+<!-- ==================== BUTTON CLICK ==================== -->
 
 <script>
 
-function openAgePopup() {
+function adButtonClick() {
 
-  document
-    .getElementById("agePopup")
-    .classList.add("show");
+  /*
+    Adastra Popunder script is installed
+    inside the <head> section above.
 
-}
-
-
-function closeAgePopup() {
-
-  document
-    .getElementById("agePopup")
-    .classList.remove("show");
+    The button click is kept as a normal
+    user interaction so the Adastra script
+    can process the click.
+  */
 
 }
 
@@ -493,13 +389,7 @@ function closeAgePopup() {
 
 
 
-<!-- ADASTRA POPUNDER -->
-
-<script src="https://inputoppose.com/7d/f9/97/7df9977abe41cb9ab0b703a1cdd40951.js"></script>
-
-
-
-<!-- ADASTRA SOCIAL BAR -->
+<!-- ==================== ADASTRA SOCIAL BAR ==================== -->
 
 <script src="https://inputoppose.com/60/9d/06/609d06c6f3813bcd6447f24d4986d13.js"></script>
 
