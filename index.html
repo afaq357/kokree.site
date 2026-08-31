@@ -255,4 +255,439 @@
       border-radius: 50%;
 
       background: rgba(0,0,0,.25);
-      color
+      color: #fff;
+
+      font-size: 38px;
+      font-weight: bold;
+      line-height: 35px;
+
+      z-index: 5;
+      cursor: pointer;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 480px) {
+
+      .page {
+        width: 100%;
+        max-width: 100%;
+        padding: 8px 0 25px;
+      }
+
+      .profile {
+        padding: 16px 0 25px;
+      }
+
+      .profile-top {
+        width: 100%;
+        padding: 0 12px;
+        gap: 12px;
+      }
+
+      .profile-photo img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .online {
+        width: 22px;
+        height: 22px;
+      }
+
+      .profile-details h1 {
+        font-size: 27px;
+      }
+
+      .stars {
+        font-size: 30px;
+      }
+
+      .numbers {
+        font-size: 16px;
+        gap: 6px;
+      }
+
+      .numbers b {
+        font-size: 17px;
+      }
+
+      /* BANNER */
+
+      .jerkmate-banner {
+        width: 100%;
+        margin: 18px 0 20px;
+      }
+
+      .jerkmate-banner img {
+        width: 300px;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      /* BUTTONS */
+
+      .buttons {
+        width: 100%;
+        padding: 0 34px;
+        margin: 14px 0 20px;
+        gap: 12px;
+      }
+
+      .action-btn {
+        width: 100%;
+        height: 38px;
+        min-height: 38px;
+        border-radius: 22px;
+        font-size: 16px;
+      }
+
+      .action-btn .icon {
+        font-size: 17px;
+      }
+
+      /* SLIDER */
+
+      .slider {
+        width: 100%;
+        aspect-ratio: 2 / 3;
+      }
+
+      .slides {
+        width: 100%;
+        height: 100%;
+      }
+
+      .slides img {
+        width: 100%;
+        min-width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+<main class="page">
+
+  <section class="profile">
+
+
+    <!-- ================= PROFILE ================= -->
+
+    <div class="profile-top">
+
+      <div class="profile-photo">
+
+        <img src="/profile.jpg" alt="Kokree">
+
+        <span class="online"></span>
+
+      </div>
+
+
+      <div class="profile-details">
+
+        <h1>
+          KOKREE
+          <span class="verified">✓</span>
+          <span class="flag">🇺🇸</span>
+        </h1>
+
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+
+        <div class="numbers">
+
+
+          <!-- VIDEO ICON -->
+
+          <span class="video-icon">
+
+            <svg viewBox="0 0 32 32" aria-hidden="true">
+
+              <rect
+                x="3"
+                y="5"
+                width="26"
+                height="22"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              />
+
+              <line
+                x1="3"
+                y1="10"
+                x2="29"
+                y2="10"
+                stroke="currentColor"
+                stroke-width="2.5"
+              />
+
+              <circle cx="8" cy="7.5" r="1" fill="currentColor"/>
+              <circle cx="12" cy="7.5" r="1" fill="currentColor"/>
+              <circle cx="16" cy="7.5" r="1" fill="currentColor"/>
+
+              <rect x="7" y="14" width="3" height="3" fill="currentColor"/>
+              <rect x="13" y="14" width="3" height="3" fill="currentColor"/>
+              <rect x="19" y="14" width="3" height="3" fill="currentColor"/>
+
+              <rect x="7" y="20" width="3" height="3" fill="currentColor"/>
+              <rect x="13" y="20" width="3" height="3" fill="currentColor"/>
+              <rect x="19" y="20" width="3" height="3" fill="currentColor"/>
+
+            </svg>
+
+          </span>
+
+
+          <b>205</b>
+
+          <span>videos</span>
+
+
+          <!-- PHOTO ICON -->
+
+          <span class="photo-icon">
+
+            <svg viewBox="0 0 32 32" aria-hidden="true">
+
+              <rect
+                x="3"
+                y="4"
+                width="26"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              />
+
+              <circle
+                cx="10"
+                cy="11"
+                r="2.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+
+              <path
+                d="M5 24 L13 16 L18 21 L21 18 L27 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              />
+
+            </svg>
+
+          </span>
+
+
+          <b>340</b>
+
+          <span>photos</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ================= JERKMATE BANNER ================= -->
+
+    <a
+      class="jerkmate-banner"
+      href="https://t.ajrkmx3.com/421332/8780/32511?file_id=606015&po=6533&aff_sub5=SF_006OG000004lmDN&aff_sub4=AT_0002"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <img
+        src="https://www.imglnkx.com/8780/DESIGN-19806_Neon_300100_6.gif"
+        width="300"
+        height="100"
+        border="0"
+        alt="JerkMate"
+      >
+
+    </a>
+
+
+    <!-- ================= BUTTONS ================= -->
+
+    <div class="buttons">
+
+
+      <a
+        class="action-btn"
+        href="https://t.ajrkmx3.com/421332/8780/39103?aff_sub5=SF_006OG000004lmDN"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <span class="icon">🔓</span>
+
+        Explicit Content
+
+      </a>
+
+
+      <a
+        class="action-btn"
+        href="https://t.ajrkmx3.com/421332/8780/39103?aff_sub5=SF_006OG000004lmDN"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <span class="icon">👁</span>
+
+        +18 Livestream
+
+      </a>
+
+
+    </div>
+
+
+    <!-- ================= IMAGE SLIDER ================= -->
+
+    <div class="slider">
+
+      <div class="slides">
+
+        <img
+          src="/model1.jpg"
+          alt="Kokree photo"
+        >
+
+        <img
+          src="/model2.jpg"
+          alt="Kokree photo"
+        >
+
+        <img
+          src="/model3.jpg"
+          alt="Kokree photo"
+        >
+
+      </div>
+
+
+      <button
+        class="prev"
+        type="button"
+        onclick="moveSlide(-1)"
+        aria-label="Previous photo"
+      >
+        ‹
+      </button>
+
+
+      <button
+        class="next"
+        type="button"
+        onclick="moveSlide(1)"
+        aria-label="Next photo"
+      >
+        ›
+      </button>
+
+    </div>
+
+
+  </section>
+
+</main>
+
+
+<!-- ================= SLIDER SCRIPT ================= -->
+
+<script>
+
+  let currentSlide = 0;
+
+  const slides = document.querySelector(".slides");
+
+  const totalSlides =
+    document.querySelectorAll(".slides img").length;
+
+
+  function showSlide() {
+
+    slides.style.transform =
+      "translateX(-" +
+      (currentSlide * 100) +
+      "%)";
+
+  }
+
+
+  function moveSlide(direction) {
+
+    currentSlide += direction;
+
+
+    if (currentSlide >= totalSlides) {
+      currentSlide = 0;
+    }
+
+
+    if (currentSlide < 0) {
+      currentSlide = totalSlides - 1;
+    }
+
+
+    showSlide();
+
+  }
+
+
+  setInterval(function() {
+
+    moveSlide(1);
+
+  }, 3000);
+
+</script>
+
+
+<!-- ================= CRAKREVENUE POP-IN ================= -->
+
+<script>
+
+  var crakPopInParamsOverlay = {
+    url: 'https://t.ajrkmx3.com/421332/8780/32511?file_id=606015&po=6533&aff_sub5=SF_006OG000004lmDN&aff_sub4=AT_0019',
+    decryptUrl: false,
+    contentType: 'overlay',
+    coverOverlay: true,
+    expireDays: 0.01
+  };
+
+</script>
+
+<script src="https://crxcra.com/popin/latest/affstitial-min.js"></script>
+
+
+</body>
+
+</html>
