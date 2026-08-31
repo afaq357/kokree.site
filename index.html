@@ -679,6 +679,43 @@ var crakPopInParamsOverlay = {
   coverOverlay: true,
   expireDays: 0.01
 };
+  <!-- SLIDER SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  let currentSlide = 0;
+
+  const slides = document.querySelector(".slides");
+  const images = document.querySelectorAll(".slides img");
+  const totalSlides = images.length;
+
+  function showSlide() {
+    slides.style.transform =
+      "translateX(-" + (currentSlide * 100) + "%)";
+  }
+
+  window.moveSlide = function(direction) {
+
+    currentSlide += direction;
+
+    if (currentSlide >= totalSlides) {
+      currentSlide = 0;
+    }
+
+    if (currentSlide < 0) {
+      currentSlide = totalSlides - 1;
+    }
+
+    showSlide();
+  };
+
+  // Automatic photo change every 3 seconds
+  setInterval(function () {
+    moveSlide(1);
+  }, 3000);
+
+});
+</script>
 </script>
 </body>
 
