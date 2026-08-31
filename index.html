@@ -620,56 +620,6 @@
 </main>
 
 
-<!-- ================= SLIDER SCRIPT ================= -->
-
-<script>
-
-  let currentSlide = 0;
-
-  const slides = document.querySelector(".slides");
-
-  const totalSlides =
-    document.querySelectorAll(".slides img").length;
-
-
-  function showSlide() {
-
-    slides.style.transform =
-      "translateX(-" +
-      (currentSlide * 100) +
-      "%)";
-
-  }
-
-
-  function moveSlide(direction) {
-
-    currentSlide += direction;
-
-
-    if (currentSlide >= totalSlides) {
-      currentSlide = 0;
-    }
-
-
-    if (currentSlide < 0) {
-      currentSlide = totalSlides - 1;
-    }
-
-
-    showSlide();
-
-  }
-
-
-  setInterval(function() {
-
-    moveSlide(1);
-
-  }, 3000);
-
-<!-- CRAKREVENUE POP-IN -->
-<script src="https://crxcra.com/popin/latest/affstitial-min.js"></script>
 
 <script>
 var crakPopInParamsOverlay = {
@@ -715,7 +665,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 3000);
 
 });
-</script>
 </script>
 </body>
 
