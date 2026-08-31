@@ -578,3 +578,53 @@ body {
   }
 
     }
+
+/* ================= FORCE SMALL BUTTONS ================= */
+
+.buttons {
+  width: 100% !important;
+  padding: 0 34px !important;
+  margin: 14px 0 20px !important;
+  gap: 12px !important;
+}
+
+.action-btn {
+  width: 100% !important;
+  height: 38px !important;
+  min-height: 38px !important;
+
+  border-radius: 22px !important;
+
+  font-size: 16px !important;
+  font-weight: 700 !important;
+
+  padding: 0 10px !important;
+  gap: 7px !important;
+}
+
+.action-btn span {
+  font-size: 17px !important;
+}
+
+@media (max-width: 480px) {
+
+  .buttons {
+    width: 100% !important;
+    padding: 0 34px !important;
+    margin: 14px 0 20px !important;
+    gap: 12px !important;
+  }
+
+  .action-btn {
+    width: 100% !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    border-radius: 22px !important;
+    font-size: 16px !important;
+  }
+
+  .action-btn span {
+    font-size: 17px !important;
+  }
+
+}
