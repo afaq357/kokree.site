@@ -17,6 +17,7 @@ body {
   justify-content: center;
 }
 
+
 /* ================= PAGE ================= */
 
 .page {
@@ -124,64 +125,68 @@ body {
 
 .video-icon,
 .photo-icon {
-  color: #24347f;
-  font-size: 23px;
-  font-weight: bold;
-  line-height: 1;
+  width: 23px;
+  height: 23px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #24347f !important;
+  flex-shrink: 0;
   margin-right: 1px;
 }
 
+.video-icon svg,
+.photo-icon svg {
+  width: 23px;
+  height: 23px;
+  display: block;
+}
 
-/* ================= JERKMATE AD ================= */
 
-.jerkmate-ad {
+/* ================= JERKMATE BANNER ================= */
+
+.jerkmate-banner {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 20px 0 18px;
+  display: block;
+  margin: 18px 0 20px;
   padding: 0;
+  text-align: center;
+  overflow: hidden;
 }
 
-.jerkmate-ad a {
+.jerkmate-banner img {
   display: block;
-  width: calc(100% - 44px);
-  max-width: 660px;
-  margin: 0 auto;
-}
-
-.jerkmate-ad img {
-  display: block;
-  width: 100%;
-  max-width: 660px;
+  width: 300px;
+  max-width: 100%;
   height: auto;
+  margin: 0 auto;
 }
 
 
 /* ================= BLUE BUTTONS ================= */
 
 .buttons {
-  width: calc(100% - 110px);
-  max-width: 630px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 18px;
-  margin: 16px auto 20px;
-  padding: 0;
+  margin: 18px 0 28px;
+  padding: 0 18px;
 }
 
 .action-btn {
   width: 100%;
-  height: 54px;
-  min-height: 54px;
+  min-height: 68px;
+  height: 68px;
 
   border: none;
-  border-radius: 28px;
+  border-radius: 40px;
 
-  background: #0796c8;
+  background: #1235c5;
   color: #fff;
 
-  font-size: 17px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 800;
 
   cursor: pointer;
   text-decoration: none;
@@ -191,12 +196,22 @@ body {
   justify-content: center;
 
   text-align: center;
-  gap: 7px;
-  padding: 0 10px;
+  gap: 10px;
+  padding: 0 15px;
+
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.action-btn:hover {
+  opacity: 0.92;
+}
+
+.action-btn:active {
+  transform: scale(0.98);
 }
 
 .action-btn span {
-  font-size: 16px;
+  font-size: 25px;
 }
 
 
@@ -251,6 +266,7 @@ body {
   line-height: 35px;
 
   z-index: 5;
+  cursor: pointer;
 }
 
 .prev {
@@ -262,11 +278,9 @@ body {
 }
 
 
-/* ================= EXPLICIT LABEL ================= */
+/* ================= EXPLICIT LINK ================= */
 
-.slider::after {
-  content: "Explicit";
-
+.explicit-link {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -285,9 +299,103 @@ body {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 30px;
   font-weight: 700;
-  line-height: 1;
 
+  text-decoration: none;
   z-index: 10;
+}
+
+
+/* ================= 18+ POPUP ================= */
+
+.age-popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+}
+
+.age-popup.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.age-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.age-box {
+  position: relative;
+  width: calc(100% - 40px);
+  max-width: 430px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px 25px;
+  text-align: center;
+  z-index: 2;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.age-close {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  border: 0;
+  background: transparent;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.age-icon {
+  width: 65px;
+  height: 65px;
+  margin: 5px auto 15px;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.age-box h2 {
+  margin: 5px 0 12px;
+  font-size: 28px;
+}
+
+.age-box p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 22px;
+}
+
+.continue-btn {
+  display: block;
+  background: #00c853;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cancel-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px;
+
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 8px;
+
+  font-size: 16px;
 }
 
 
@@ -352,48 +460,57 @@ body {
 
   .video-icon,
   .photo-icon {
-    font-size: 22px;
+    width: 23px;
+    height: 23px;
+  }
+
+  .video-icon svg,
+  .photo-icon svg {
+    width: 23px;
+    height: 23px;
   }
 
 
-  /* JERKMATE AD */
+  /* JERKMATE BANNER */
 
-  .jerkmate-ad {
+  .jerkmate-banner {
     width: 100%;
-    margin: 20px 0 18px;
+    margin: 18px 0 20px;
+    padding: 0;
   }
 
-  .jerkmate-ad a {
-    width: calc(100% - 44px);
-    max-width: 660px;
-  }
-
-  .jerkmate-ad img {
-    width: 100%;
-    max-width: 660px;
+  .jerkmate-banner img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
   }
 
 
   /* BLUE BUTTONS */
 
   .buttons {
-    width: calc(100% - 110px);
-    max-width: 630px;
-    padding: 0;
-    margin: 16px auto 20px;
+    width: 100%;
+    padding: 0 18px;
+    margin: 18px 0 28px;
     gap: 18px;
   }
 
   .action-btn {
     width: 100%;
-    height: 54px;
-    min-height: 54px;
-    border-radius: 28px;
-    font-size: 17px;
+    height: 68px;
+    min-height: 68px;
+
+    border-radius: 40px;
+
+    font-size: 23px;
+    font-weight: 800;
+
+    gap: 10px;
   }
 
   .action-btn span {
-    font-size: 16px;
+    font-size: 25px;
   }
 
 
@@ -403,6 +520,11 @@ body {
     width: 100%;
     margin: 15px 0 20px;
     aspect-ratio: 2 / 3;
+  }
+
+  .slides {
+    width: 100%;
+    height: 100%;
   }
 
   .slides img {
@@ -432,158 +554,11 @@ body {
   }
 
 
-  /* EXPLICIT */
+  /* EXPLICIT LINK */
 
-  .slider::after {
+  .explicit-link {
     height: 45px;
     font-size: 30px;
   }
-}
-/* ================= VIDEO / PHOTO ICONS ================= */
 
-.video-icon,
-.photo-icon {
-  color: #24347f !important;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 27px !important;
-  font-weight: 400 !important;
-  line-height: 1;
-  margin-right: 1px;
-}
-.video-icon,
-.photo-icon {
-  width: 27px;
-  height: 27px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: #24347f;
-  flex-shrink: 0;
-}
-
-.video-icon,
-.photo-icon {
-  width: 23px;
-  height: 23px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: #24347f;
-  flex-shrink: 0;
-}
-
-.video-icon svg,
-.photo-icon svg {
-  width: 23px;
-  height: 23px;
-  display: block;
-}
-.slider::after {
-  display: none !important;
-}
-
-.explicit-link {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 20, 25, 0.72);
-  color: #ffd900;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 30px;
-  font-weight: 700;
-  text-decoration: none;
-  z-index: 10;
-}
-/* 18+ POPUP */
-
-.age-popup {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 99999;
-}
-
-.age-popup.show {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.age-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.65);
-}
-
-.age-box {
-  position: relative;
-  width: calc(100% - 40px);
-  max-width: 430px;
-  background: #fff;
-  border-radius: 18px;
-  padding: 30px 25px;
-  text-align: center;
-  z-index: 2;
-  box-shadow: 0 10px 40px rgba(0,0,0,.4);
-}
-
-.age-close {
-  position: absolute;
-  right: 12px;
-  top: 8px;
-  border: 0;
-  background: transparent;
-  font-size: 32px;
-  cursor: pointer;
-}
-
-.age-icon {
-  width: 65px;
-  height: 65px;
-  margin: 5px auto 15px;
-  border-radius: 50%;
-  background: #111;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.age-box h2 {
-  margin: 5px 0 12px;
-  font-size: 28px;
-}
-
-.age-box p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 22px;
-}
-
-.continue-btn {
-  display: block;
-  background: #00c853;
-  color: #fff;
-  text-decoration: none;
-  padding: 15px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.cancel-btn {
-  width: 100%;
-  margin-top: 12px;
-  padding: 14px;
-  border: 1px solid #ccc;
-  background: #fff;
-  border-radius: 8px;
-  font-size: 16px;
 }
