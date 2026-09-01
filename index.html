@@ -402,9 +402,11 @@ body {
 
   cursor: pointer;
 
-  z-index: 5;
+  z-index: 1000000;
 
   padding: 0;
+
+  touch-action: manipulation;
 }
 
 
@@ -929,8 +931,8 @@ body {
 
     <button
       class="popup-close"
+      id="popupClose"
       type="button"
-      onclick="closePopup()"
       aria-label="Close"
     >
       ×
@@ -1044,6 +1046,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }, 3000);
 
+
+  /* ================================================= */
+  /* ================ POPUP X BUTTON ================= */
+  /* ================================================= */
+
+  const closeButton = document.getElementById("popupClose");
+
+  if (closeButton) {
+
+    closeButton.addEventListener("pointerdown", function(event) {
+
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+
+    }, true);
+
+
+    closeButton.addEventListener("pointerup", function(event) {
+
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+
+      closePopup();
+
+    }, true);
+
+
+    closeButton.addEventListener("click", function(event) {
+
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+
+      closePopup();
+
+    }, true);
+
+  }
+
+
 });
 
 
@@ -1099,6 +1143,15 @@ document.addEventListener("click", function(event) {
   }
 
 
+  /* =============================================== */
+  /* Popup ke andar ke clicks ko ignore karo */
+  /* =============================================== */
+
+  if (popup.contains(event.target)) {
+    return;
+  }
+
+
   /* Popup already open hai */
 
   if (popup.classList.contains("show")) {
@@ -1114,6 +1167,8 @@ document.addEventListener("click", function(event) {
   event.preventDefault();
 
   event.stopPropagation();
+
+  event.stopImmediatePropagation();
 
   openPopup();
 
@@ -1133,6 +1188,15 @@ document.addEventListener("touchend", function(event) {
   }
 
 
+  /* =============================================== */
+  /* Popup ke andar ke taps ko ignore karo */
+  /* =============================================== */
+
+  if (popup.contains(event.target)) {
+    return;
+  }
+
+
   /* Popup already open hai */
 
   if (popup.classList.contains("show")) {
@@ -1148,6 +1212,8 @@ document.addEventListener("touchend", function(event) {
   event.preventDefault();
 
   event.stopPropagation();
+
+  event.stopImmediatePropagation();
 
   openPopup();
 
@@ -1216,4 +1282,4 @@ var crakPopInParamsOverlay = {
 
 </body>
 
-</html>
+  </html>
