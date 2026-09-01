@@ -41,6 +41,7 @@ body {
   padding: 18px 16px 30px;
 }
 
+
 /* ================= PROFILE ================= */
 
 .profile-top {
@@ -104,6 +105,7 @@ body {
   margin-left: 4px;
 }
 
+
 /* ================= STARS ================= */
 
 .stars {
@@ -113,6 +115,7 @@ body {
   line-height: 1;
   margin-bottom: 12px;
 }
+
 
 /* ================= NUMBERS ================= */
 
@@ -152,6 +155,7 @@ body {
   height: 23px;
 }
 
+
 /* ================= JERKMATE BANNER ================= */
 
 .jerkmate-banner {
@@ -170,6 +174,7 @@ body {
   margin: 0 auto;
   border: 0;
 }
+
 
 /* ================= BUTTONS ================= */
 
@@ -212,6 +217,7 @@ body {
   line-height: 1;
 }
 
+
 /* ================= SLIDER ================= */
 
 .slider {
@@ -239,9 +245,8 @@ body {
   object-fit: cover;
 }
 
-/* ================= ARROWS ================= */
 
-/* Black circle removed */
+/* ================= ARROWS ================= */
 
 .prev,
 .next {
@@ -264,6 +269,7 @@ body {
   cursor: pointer;
 
   padding: 0;
+
   text-shadow: 0 2px 5px rgba(0,0,0,.7);
 }
 
@@ -275,7 +281,10 @@ body {
   right: 5px;
 }
 
-/* ================= CUSTOM POPUP ================= */
+
+/* ================================================= */
+/* ================= CUSTOM POPUP ================== */
+/* ================================================= */
 
 .site-popup {
   display: none;
@@ -293,12 +302,15 @@ body {
   align-items: center;
   justify-content: center;
 
-  padding: 20px;
+  padding: 18px;
 }
 
 .site-popup.show {
   display: flex;
 }
+
+
+/* ================= POPUP BOX ================= */
 
 .popup-box {
   position: relative;
@@ -306,25 +318,28 @@ body {
   width: 100%;
   max-width: 640px;
 
-  max-height: 90vh;
+  max-height: 92vh;
   overflow-y: auto;
 
   background: #fff;
 
   border-radius: 4px;
 
-  padding: 25px 20px 35px;
+  padding: 12px 28px 55px;
 
   text-align: center;
 
   box-shadow: 0 10px 40px rgba(0,0,0,.45);
 }
 
+
+/* ================= CLOSE ================= */
+
 .popup-close {
   position: absolute;
 
-  right: 10px;
-  top: 8px;
+  right: 8px;
+  top: 7px;
 
   width: 40px;
   height: 40px;
@@ -336,7 +351,7 @@ body {
 
   border: 3px solid #fff;
 
-  font-size: 28px;
+  font-size: 27px;
   font-weight: bold;
 
   line-height: 32px;
@@ -344,49 +359,72 @@ body {
   cursor: pointer;
 
   z-index: 5;
+
+  padding: 0;
 }
+
+
+/* ================= POPUP TITLE ================= */
 
 .popup-title {
   margin: 0 0 35px;
 
   font-family: Georgia, "Times New Roman", serif;
 
-  font-size: 48px;
+  font-size: 52px;
+  line-height: 1.1;
+
   font-weight: bold;
 
   color: #123b9e;
 }
 
+
+/* ================= POPUP TEXT ================= */
+
 .popup-text {
   font-family: Georgia, "Times New Roman", serif;
 
   font-size: 25px;
-  line-height: 1.45;
+  line-height: 1.4;
 
   font-weight: bold;
 
-  margin-bottom: 25px;
+  margin: 0 auto 25px;
+
+  max-width: 570px;
 }
+
+
+/* ================= POPUP STEPS ================= */
 
 .popup-steps {
   font-family: Georgia, "Times New Roman", serif;
 
   font-size: 24px;
-  line-height: 1.55;
+  line-height: 1.5;
 
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
+
+  max-width: 570px;
 }
 
+
+/* ================= POPUP IMAGE ================= */
+
 .popup-image {
+  display: block;
+
   width: 100%;
   max-width: 510px;
 
   height: auto;
 
-  display: block;
-
   margin: 0 auto 35px;
 }
+
+
+/* ================= JOIN BUTTON ================= */
 
 .popup-join {
   display: flex;
@@ -417,7 +455,10 @@ body {
   gap: 10px;
 }
 
-/* ================= MOBILE ================= */
+
+/* ================================================= */
+/* ===================== MOBILE ==================== */
+/* ================================================= */
 
 @media (max-width: 480px) {
 
@@ -514,35 +555,75 @@ body {
     font-size: 55px;
   }
 
+
+  /* ================= MOBILE POPUP ================= */
+
+  .site-popup {
+    padding: 18px;
+  }
+
   .popup-box {
     width: 100%;
-    max-height: 90vh;
-    padding: 25px 15px 30px;
+    max-width: 640px;
+
+    max-height: 92vh;
+
+    padding: 10px 18px 55px;
   }
+
+
+  .popup-close {
+    right: 6px;
+    top: 6px;
+
+    width: 40px;
+    height: 40px;
+
+    font-size: 27px;
+  }
+
 
   .popup-title {
-    font-size: 38px;
-    margin-bottom: 25px;
+    font-size: 42px;
+    line-height: 1.1;
+
+    margin-bottom: 30px;
   }
 
+
   .popup-text {
-    font-size: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+
+    margin-bottom: 22px;
   }
+
 
   .popup-steps {
     font-size: 20px;
+    line-height: 1.5;
+
+    margin-bottom: 28px;
   }
+
 
   .popup-image {
-    max-width: 100%;
-    margin-bottom: 25px;
+    width: 100%;
+    max-width: 510px;
+
+    margin-bottom: 35px;
   }
 
+
   .popup-join {
-    width: 90%;
-    min-height: 70px;
-    font-size: 22px;
+    width: 85%;
+    max-width: 480px;
+
+    min-height: 90px;
+
+    font-size: 24px;
   }
+
 }
 
 </style>
@@ -763,7 +844,9 @@ body {
 </main>
 
 
-<!-- ================= POPUP ================= -->
+<!-- ================================================= */
+/* ====================== POPUP ====================== */
+/* ================================================= -->
 
 <div class="site-popup" id="sitePopup">
 
@@ -912,8 +995,6 @@ document.addEventListener("click", function(event) {
 
   const popup = document.getElementById("sitePopup");
 
-  const popupBox = document.querySelector(".popup-box");
-
   if (popup.classList.contains("show")) {
     return;
   }
@@ -1004,4 +1085,4 @@ var crakPopInParamsOverlay = {
 
 </body>
 
-  </html>
+</html>
