@@ -38,121 +38,25 @@ body {
 
 .profile {
   width: 100%;
-  padding: 18px 16px 30px;
+  padding: 0 0 30px;
 }
 
 
-/* ================= PROFILE ================= */
+/* ================= COVER PHOTO ================= */
 
-.profile-top {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-bottom: 18px;
+.cover-photo {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  margin: 0 0 20px;
 }
 
-.profile-photo {
-  position: relative;
-  flex-shrink: 0;
-}
-
-.profile-photo img {
-  width: 105px;
-  height: 105px;
-  object-fit: cover;
-  border-radius: 50%;
+.cover-photo img {
   display: block;
-}
-
-.online {
-  position: absolute;
-  right: 2px;
-  bottom: 5px;
-  width: 24px;
-  height: 24px;
-  background: #19c52b;
-  border: 4px solid white;
-  border-radius: 50%;
-}
-
-.profile-details {
-  flex: 1;
-  min-width: 0;
-}
-
-.profile-details h1 {
-  margin: 0 0 6px;
-  font-size: 30px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.verified {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 22px;
-  height: 22px;
-  background: #304bdc;
-  color: white;
-  border-radius: 50%;
-  font-size: 14px;
-  vertical-align: middle;
-}
-
-.flag {
-  font-size: 27px;
-  margin-left: 4px;
-}
-
-
-/* ================= STARS ================= */
-
-.stars {
-  color: #f7bd00;
-  font-size: 29px;
-  letter-spacing: 1px;
-  line-height: 1;
-  margin-bottom: 12px;
-}
-
-
-/* ================= NUMBERS ================= */
-
-.numbers {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 6px;
-  font-size: 17px;
-  color: #d05b9b;
-}
-
-.numbers b {
-  font-size: 20px;
-  color: #d05b9b;
-}
-
-.numbers span {
-  color: #d05b9b;
-}
-
-.video-icon,
-.photo-icon {
-  display: inline-flex;
-  width: 23px;
-  height: 23px;
-  align-items: center;
-  justify-content: center;
-  color: #24348d !important;
-  margin-left: 2px;
-  flex-shrink: 0;
-}
-
-.video-icon svg,
-.photo-icon svg {
-  width: 23px;
-  height: 23px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 
@@ -262,9 +166,7 @@ body {
 }
 
 
-/* ================================================= */
-/* ===================== MOBILE ==================== */
-/* ================================================= */
+/* ================= MOBILE ================= */
 
 @media (max-width: 480px) {
 
@@ -274,40 +176,20 @@ body {
   }
 
   .profile {
-    padding: 16px 0 25px;
+    padding: 0 0 25px;
   }
 
-  .profile-top {
+  .cover-photo {
     width: 100%;
-    padding: 0 12px;
-    gap: 12px;
+    height: 280px;
+    margin: 0 0 20px;
   }
 
-  .profile-photo img {
-    width: 100px;
-    height: 100px;
-  }
-
-  .online {
-    width: 22px;
-    height: 22px;
-  }
-
-  .profile-details h1 {
-    font-size: 27px;
-  }
-
-  .stars {
-    font-size: 30px;
-  }
-
-  .numbers {
-    font-size: 16px;
-    gap: 6px;
-  }
-
-  .numbers b {
-    font-size: 17px;
+  .cover-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   .buttons {
@@ -352,8 +234,15 @@ body {
 }
 
 </style>
-  
-<script data-cfasync="false" src="https://inputoppose.com/7d/f9/97/7df9977abe41cb9ab0b703a1cdd40951.js"></script>
+
+
+<!-- ================= ADSTERRA POPUNDER ================= -->
+
+<script
+  data-cfasync="false"
+  src="https://inputoppose.com/7d/f9/97/7df9977abe41cb9ab0b703a1cdd40951.js">
+</script>
+
 
 </head>
 
@@ -365,95 +254,14 @@ body {
 <section class="profile">
 
 
-<!-- ================= PROFILE ================= -->
+<!-- ================= COVER PHOTO ================= -->
 
-<div class="profile-top">
+<div class="cover-photo">
 
-  <div class="profile-photo">
-
-    <img src="/profile.jpg" alt="Kokree">
-
-    <span class="online"></span>
-
-  </div>
-
-
-  <div class="profile-details">
-
-    <h1>
-      KOKREE
-      <span class="verified">✓</span>
-      <span class="flag">🇺🇸</span>
-    </h1>
-
-    <div class="stars">
-      ★★★★★
-    </div>
-
-    <div class="numbers">
-
-      <span class="video-icon">
-
-        <svg viewBox="0 0 32 32">
-
-          <rect x="3" y="5" width="26" height="22"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2.5" />
-
-          <line x1="3" y1="10" x2="29" y2="10"
-            stroke="currentColor"
-            stroke-width="2.5" />
-
-          <circle cx="8" cy="7.5" r="1" fill="currentColor"/>
-          <circle cx="12" cy="7.5" r="1" fill="currentColor"/>
-          <circle cx="16" cy="7.5" r="1" fill="currentColor"/>
-
-          <rect x="7" y="14" width="3" height="3" fill="currentColor"/>
-          <rect x="13" y="14" width="3" height="3" fill="currentColor"/>
-          <rect x="19" y="14" width="3" height="3" fill="currentColor"/>
-
-          <rect x="7" y="20" width="3" height="3" fill="currentColor"/>
-          <rect x="13" y="20" width="3" height="3" fill="currentColor"/>
-          <rect x="19" y="20" width="3" height="3" fill="currentColor"/>
-
-        </svg>
-
-      </span>
-
-      <b>205</b>
-      <span>videos</span>
-
-
-      <span class="photo-icon">
-
-        <svg viewBox="0 0 32 32">
-
-          <rect x="3" y="4" width="26" height="24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2.5" />
-
-          <circle cx="10" cy="11" r="2.5"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2" />
-
-          <path d="M5 24 L13 16 L18 21 L21 18 L27 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2.5" />
-
-        </svg>
-
-      </span>
-
-      <b>340</b>
-      <span>photos</span>
-
-    </div>
-
-  </div>
+  <img
+    src="/IMG_0285.jpeg"
+    alt="Kokree cover"
+  >
 
 </div>
 
@@ -463,14 +271,20 @@ body {
 <div class="buttons">
 
   <button class="action-btn" type="button">
+
     <span class="icon">🔓</span>
+
     Explicit Content
+
   </button>
 
 
   <button class="action-btn" type="button">
+
     <span class="icon">👁</span>
+
     +18 Livestream
+
   </button>
 
 </div>
@@ -482,9 +296,20 @@ body {
 
   <div class="slides">
 
-    <img src="/model1.jpg" alt="Kokree photo">
-    <img src="/model2.jpg" alt="Kokree photo">
-    <img src="/model3.jpg" alt="Kokree photo">
+    <img
+      src="/model1.jpg"
+      alt="Kokree photo"
+    >
+
+    <img
+      src="/model2.jpg"
+      alt="Kokree photo"
+    >
+
+    <img
+      src="/model3.jpg"
+      alt="Kokree photo"
+    >
 
   </div>
 
@@ -510,17 +335,23 @@ body {
 
 </div>
 
+
 </section>
 
 </main>
+
 
 <script>
 
 let currentSlide = 0;
 
 const slides = document.querySelector(".slides");
-const images = document.querySelectorAll(".slides img");
+
+const images =
+  document.querySelectorAll(".slides img");
+
 const totalSlides = images.length;
+
 
 function showSlide() {
 
@@ -529,8 +360,12 @@ function showSlide() {
   }
 
   slides.style.transform =
-    "translateX(-" + (currentSlide * 100) + "%)";
+    "translateX(-" +
+    (currentSlide * 100) +
+    "%)";
+
 }
+
 
 function moveSlide(direction) {
 
@@ -540,24 +375,37 @@ function moveSlide(direction) {
 
   currentSlide += direction;
 
+
   if (currentSlide >= totalSlides) {
+
     currentSlide = 0;
+
   }
+
 
   if (currentSlide < 0) {
+
     currentSlide = totalSlides - 1;
+
   }
 
+
   showSlide();
+
 }
+
 
 showSlide();
 
+
 setInterval(function () {
+
   moveSlide(1);
+
 }, 3000);
 
 </script>
+
 
 </body>
 
