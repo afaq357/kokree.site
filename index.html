@@ -150,6 +150,21 @@ body {
   padding: 0 10px;
 
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+
+  /* Remove blue tap highlight */
+  -webkit-tap-highlight-color: transparent;
+
+  /* Smooth press effect */
+  transition: transform 0.08s ease;
+}
+
+/* Button press effect */
+.action-btn:active {
+  transform: scale(0.96);
+}
+
+.action-btn:focus {
+  outline: none;
 }
 
 .action-btn .icon {
@@ -362,6 +377,18 @@ body {
     padding: 0 8px;
 
     gap: 5px;
+
+    -webkit-tap-highlight-color: transparent;
+
+    transition: transform 0.08s ease;
+  }
+
+  .action-btn:active {
+    transform: scale(0.96);
+  }
+
+  .action-btn:focus {
+    outline: none;
   }
 
   .action-btn .icon {
