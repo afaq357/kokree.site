@@ -20,7 +20,7 @@ body {
   width: 100%;
   min-height: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  background: #ff69b4
+  background: #ff69b4;
   color: #111;
 }
 
@@ -33,7 +33,7 @@ body {
   width: 100%;
   max-width: 700px;
   min-height: 100vh;
-  background: #ff69b4
+  background: #ff69b4;
 }
 
 .profile {
@@ -126,13 +126,77 @@ body {
   transition: transform .5s ease;
 }
 
-.slides img {
-  display: block;
+.slide-item {
+  position: relative;
   width: 100%;
   min-width: 100%;
   flex: 0 0 100%;
   height: 100%;
+  overflow: hidden;
+}
+
+.slide-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+
+
+/* ================= PLAY ICON ================= */
+
+.play-circle {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 76px;
+  height: 76px;
+
+  transform: translate(-50%, -50%);
+
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.25);
+
+  animation: playPulse 1.8s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+.play-icon {
+  color: #fff;
+  font-size: 32px;
+  line-height: 1;
+
+  margin-left: 4px;
+
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes playPulse {
+
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.85;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.10);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.85;
+  }
+
 }
 
 
@@ -219,11 +283,25 @@ body {
     height: 100%;
   }
 
-  .slides img {
+  .slide-item {
     width: 100%;
     min-width: 100%;
     height: 100%;
+  }
+
+  .slide-item img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+  }
+
+  .play-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .play-icon {
+    font-size: 29px;
   }
 
   .pagination {
@@ -300,20 +378,48 @@ body {
 
   <div class="slides">
 
-    <img
-      src="/model1.jpg"
-      alt="Kokree photo"
-    >
 
-    <img
-      src="/model2.jpg"
-      alt="Kokree photo"
-    >
+    <div class="slide-item">
 
-    <img
-      src="/model3.jpg"
-      alt="Kokree photo"
-    >
+      <img
+        src="/model1.jpg"
+        alt="Kokree photo"
+      >
+
+      <div class="play-circle">
+        <span class="play-icon">▶</span>
+      </div>
+
+    </div>
+
+
+    <div class="slide-item">
+
+      <img
+        src="/model2.jpg"
+        alt="Kokree photo"
+      >
+
+      <div class="play-circle">
+        <span class="play-icon">▶</span>
+      </div>
+
+    </div>
+
+
+    <div class="slide-item">
+
+      <img
+        src="/model3.jpg"
+        alt="Kokree photo"
+      >
+
+      <div class="play-circle">
+        <span class="play-icon">▶</span>
+      </div>
+
+    </div>
+
 
   </div>
 
@@ -370,7 +476,7 @@ let currentSlide = 0;
 const slides = document.querySelector(".slides");
 
 const images =
-  document.querySelectorAll(".slides img");
+  document.querySelectorAll(".slide-item");
 
 const totalSlides = images.length;
 
