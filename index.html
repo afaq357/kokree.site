@@ -20,7 +20,7 @@ body {
   width: 100%;
   min-height: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  background: #ffff;
+  background: #fff;
   color: #111;
 }
 
@@ -33,7 +33,7 @@ body {
   width: 100%;
   max-width: 700px;
   min-height: 100vh;
-  background: #ff69b4;
+  background: #fff;
 }
 
 .profile {
@@ -83,7 +83,7 @@ body {
   border: none;
   border-radius: 22px;
 
-  background: #000000;
+  background: #000;
   color: #fff;
 
   font-size: 16px;
@@ -101,12 +101,9 @@ body {
   line-height: 1;
 }
 
-
-/* ================= DOWN ARROW ================= */
-
 .down-arrow {
-  font-size: 22px;
-  font-weight: 1100;
+  font-size: 24px;
+  font-weight: 900;
   line-height: 1;
 }
 
@@ -117,8 +114,8 @@ body {
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: #eee;
-  margin: 15px 0 20px;
+  background: #fff;
+  margin: 15px 0 0;
   aspect-ratio: 2 / 3;
 }
 
@@ -139,39 +136,35 @@ body {
 }
 
 
-/* ================= SLIDER ARROWS ================= */
+/* ================= PAGINATION ================= */
 
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+.pagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
 
-  width: 45px;
-  height: 60px;
+  background: #fff;
 
-  border: 0;
+  padding: 12px 0 10px;
+}
+
+.pagination button {
+  border: none;
   background: transparent;
-  color: #fff;
 
-  font-size: 55px;
-  font-weight: bold;
-  line-height: 55px;
+  color: #111;
 
-  z-index: 5;
+  font-size: 16px;
+  font-weight: 700;
+
   cursor: pointer;
-
-  padding: 0;
-
-  text-shadow: 0 2px 5px rgba(0,0,0,.7);
+  padding: 4px 6px;
 }
 
-.prev {
-  left: 5px;
-}
-
-.next {
-  right: 5px;
+.pagination button.active {
+  font-weight: 900;
 }
 
 
@@ -233,11 +226,13 @@ body {
     object-fit: cover;
   }
 
-  .prev,
-  .next {
-    width: 45px;
-    height: 60px;
-    font-size: 55px;
+  .pagination {
+    padding: 12px 0 10px;
+    gap: 18px;
+  }
+
+  .pagination button {
+    font-size: 16px;
   }
 
 }
@@ -292,7 +287,7 @@ body {
 
     <span class="icon">👁</span>
 
-    View More 
+    Join for Free
 
   </button>
 
@@ -322,24 +317,42 @@ body {
 
   </div>
 
+</div>
+
+
+<!-- ================= PAGINATION ================= -->
+
+<div class="pagination">
 
   <button
-    class="prev"
     type="button"
-    onclick="moveSlide(-1)"
-    aria-label="Previous photo"
+    onclick="goToSlide(0)"
+    id="page1"
   >
-    ‹
+    1
   </button>
 
+  <button
+    type="button"
+    onclick="goToSlide(1)"
+    id="page2"
+  >
+    2
+  </button>
 
   <button
-    class="next"
     type="button"
-    onclick="moveSlide(1)"
-    aria-label="Next photo"
+    onclick="goToSlide(2)"
+    id="page3"
   >
-    ›
+    3
+  </button>
+
+  <button
+    type="button"
+    onclick="nextSlide()"
+  >
+    Next
   </button>
 
 </div>
@@ -376,14 +389,45 @@ function showSlide() {
 }
 
 
-function moveSlide(direction) {
+function updatePagination() {
 
-  if (totalSlides === 0) {
+  const buttons =
+    document.querySelectorAll(".pagination button");
+
+  buttons.forEach(function(button, index) {
+
+    if (index < totalSlides) {
+
+      button.classList.toggle(
+        "active",
+        index === currentSlide
+      );
+
+    }
+
+  });
+
+}
+
+
+function goToSlide(index) {
+
+  if (index < 0 || index >= totalSlides) {
     return;
   }
 
-  currentSlide += direction;
+  currentSlide = index;
 
+  showSlide();
+
+  updatePagination();
+
+}
+
+
+function nextSlide() {
+
+  currentSlide++;
 
   if (currentSlide >= totalSlides) {
 
@@ -391,27 +435,16 @@ function moveSlide(direction) {
 
   }
 
-
-  if (currentSlide < 0) {
-
-    currentSlide = totalSlides - 1;
-
-  }
-
-
   showSlide();
+
+  updatePagination();
 
 }
 
 
 showSlide();
 
-
-setInterval(function () {
-
-  moveSlide(1);
-
-}, 3000);
+updatePagination();
 
 </script>
 
