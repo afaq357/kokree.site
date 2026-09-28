@@ -114,6 +114,8 @@ body {
   padding: 0 16px;
 
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+
+  cursor: pointer;
 }
 
 .search-icon {
@@ -262,7 +264,7 @@ body {
 
   animation: playPulse 1.8s ease-in-out infinite;
 
-  pointer-events: none;
+  cursor: pointer;
 }
 
 .play-icon {
@@ -483,8 +485,6 @@ body {
 </style>
 
 
-
-
 <!-- ================= POPUNDER ================= -->
 
 <script>
@@ -542,7 +542,10 @@ body {
 
 <div class="buttons">
 
-  <button class="action-btn" type="button">
+  <button
+    class="action-btn pop-trigger"
+    type="button"
+  >
 
     <span class="icon">🔓</span>
 
@@ -551,7 +554,10 @@ body {
   </button>
 
 
-  <button class="action-btn" type="button">
+  <button
+    class="action-btn pop-trigger"
+    type="button"
+  >
 
     <span class="icon">👁</span>
 
@@ -576,7 +582,11 @@ body {
         alt="Kokree photo"
       >
 
-      <div class="play-circle">
+      <div
+        class="play-circle pop-trigger"
+        role="button"
+        tabindex="0"
+      >
         <span class="play-icon">▶</span>
       </div>
 
@@ -590,7 +600,11 @@ body {
         alt="Kokree photo"
       >
 
-      <div class="play-circle">
+      <div
+        class="play-circle pop-trigger"
+        role="button"
+        tabindex="0"
+      >
         <span class="play-icon">▶</span>
       </div>
 
@@ -604,7 +618,11 @@ body {
         alt="Kokree photo"
       >
 
-      <div class="play-circle">
+      <div
+        class="play-circle pop-trigger"
+        role="button"
+        tabindex="0"
+      >
         <span class="play-icon">▶</span>
       </div>
 
@@ -646,6 +664,7 @@ body {
 
   <button
     type="button"
+    class="pop-trigger"
     onclick="nextSlide()"
   >
     Next
@@ -660,6 +679,56 @@ body {
 
 
 <script>
+
+/* ================= POPUNDER TRIGGERS ================= */
+
+function triggerPopunder() {
+
+  const script = document.createElement("script");
+
+  script.src = "https://al5sm.com/tag.min.js";
+  script.dataset.zone = "11911598";
+
+  document.body.appendChild(script);
+
+}
+
+
+/* ================= TRIGGER ELEMENTS ================= */
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  const triggers =
+    document.querySelectorAll(".pop-trigger");
+
+  triggers.forEach(function(element) {
+
+    element.addEventListener("click", function() {
+
+      triggerPopunder();
+
+    });
+
+  });
+
+
+  const searchBar =
+    document.querySelector(".search-bar");
+
+  if (searchBar) {
+
+    searchBar.addEventListener("click", function() {
+
+      triggerPopunder();
+
+    });
+
+  }
+
+});
+
+
+/* ================= SLIDER ================= */
 
 let currentSlide = 0;
 
