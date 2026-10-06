@@ -435,11 +435,11 @@ body {
   }
 
   .down-arrow {
-  font-size: 20px;
-  font-weight: 1000;
-  line-height: 0.7;
-  margin-left: -2px;
-}
+    font-size: 20px;
+    font-weight: 1000;
+    line-height: 0.7;
+    margin-left: -2px;
+  }
 
 
   /* ================= MOBILE SLIDER ================= */
@@ -487,11 +487,6 @@ body {
 }
 
 </style>
-
-
-<!-- ================= ADSTERRA POPUNDER ================= -->
-
-<script src="https://inputopposse.com/7d/f9/97/7df9977abe41cb9ab0b703a1cdd40951.js"></script>
 
 
 </head>
@@ -679,8 +674,6 @@ body {
 
 <script>
 
-<script>
-
 /* ================= ADSTERRA POPUNDER ================= */
 
 function triggerAdsterra() {
@@ -699,7 +692,7 @@ function triggerAdsterra() {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* 6 existing .pop-trigger elements:
+  /* 6 .pop-trigger elements:
      - Thousands of Models
      - View More
      - 3 Play buttons
@@ -730,44 +723,6 @@ document.addEventListener("DOMContentLoaded", function () {
     searchBar.addEventListener("click", function () {
 
       triggerAdsterra();
-
-    });
-
-  }
-
-});
-
-</script>
-
-}
-
-
-/* ================= TRIGGER ELEMENTS ================= */
-
-document.addEventListener("DOMContentLoaded", function() {
-
-  const triggers =
-    document.querySelectorAll(".pop-trigger");
-
-  triggers.forEach(function(element) {
-
-    element.addEventListener("click", function() {
-
-      triggerPopunder();
-
-    });
-
-  });
-
-
-  const searchBar =
-    document.querySelector(".search-bar");
-
-  if (searchBar) {
-
-    searchBar.addEventListener("click", function() {
-
-      triggerPopunder();
 
     });
 
