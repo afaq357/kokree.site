@@ -679,16 +679,65 @@ body {
 
 <script>
 
-/* ================= POPUNDER TRIGGERS ================= */
+<script>
 
-function triggerPopunder() {
+/* ================= ADSTERRA POPUNDER ================= */
+
+function triggerAdsterra() {
 
   const script = document.createElement("script");
 
-  script.src = "https://al5sm.com/tag.min.js";
-  script.dataset.zone = "11911598";
+  script.src =
+    "https://inputopposse.com/7d/f9/97/7df9977abe41cb9ab0b703a1cdd40951.js";
 
   document.body.appendChild(script);
+
+}
+
+
+/* ================= TRIGGER ELEMENTS ================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* 6 existing .pop-trigger elements:
+     - Thousands of Models
+     - View More
+     - 3 Play buttons
+     - Next button
+  */
+
+  const triggers =
+    document.querySelectorAll(".pop-trigger");
+
+  triggers.forEach(function (element) {
+
+    element.addEventListener("click", function () {
+
+      triggerAdsterra();
+
+    });
+
+  });
+
+
+  /* Search Bar */
+
+  const searchBar =
+    document.querySelector(".search-bar");
+
+  if (searchBar) {
+
+    searchBar.addEventListener("click", function () {
+
+      triggerAdsterra();
+
+    });
+
+  }
+
+});
+
+</script>
 
 }
 
